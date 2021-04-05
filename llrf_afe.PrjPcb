@@ -40,7 +40,7 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe_main.SchDoc
+DocumentPath=llrf_afe_main.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -56,29 +56,63 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RCSALOSM
 
+[Document2]
+DocumentPath=llrf_afe_dds.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=YOUBDOVE
+
+[Document3]
+DocumentPath=llrf_afe_dds.Harness
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [Parameter1]
-Name=Разработал
-Value=Styuf A
+Name=GlobalOrganizationName
+Value=CosyLab Siberia
 
 [Parameter2]
-Name=Revision
-Value=v1.0
-
-[Parameter3]
-Name=GlobalProjectName3
-Value=
-
-[Parameter4]
-Name=GlobalProjectName2
-Value=Analog Front End
-
-[Parameter5]
 Name=GlobalProjectName1
 Value=LLRF-AFE
 
+[Parameter3]
+Name=GlobalProjectName2
+Value=Analog Front End
+
+[Parameter4]
+Name=GlobalProjectName3
+Value=
+
+[Parameter5]
+Name=Revision
+Value=v1.0
+
 [Parameter6]
-Name=GlobalOrganizationName
-Value=CosyLab Siberia
+Name=Разработал
+Value=Styuf A
 
 [Configuration1]
 Name=Sources
