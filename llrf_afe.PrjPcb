@@ -107,6 +107,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NTLMARBE
 
+[Document5]
+DocumentPath=llrf_afe_mfm.Harness
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [Parameter1]
 Name=GlobalOrganizationName
 Value=CosyLab Siberia
@@ -1033,10 +1050,22 @@ NetClassManualEnabled=1
 NetClassSeparateForBusSections=0
 
 [LibraryUpdateOptions]
-SelectedOnly=0
+SelectedOnly=1
 UpdateVariants=1
 UpdateToLatestRevision=1
 PartTypes=0
+ComponentLibIdentifierKind0=Library Name And Type
+ComponentLibraryIdentifier0=LTC2379.SchLib
+ComponentDesignItemID0=LTC2739
+ComponentSymbolReference0=LTC2739
+ComponentUpdate0=1
+ComponentIsDeviceSheet0=0
+ComponentLibIdentifierKind1=Library Name And Type
+ComponentLibraryIdentifier1=my_passive.SchLib
+ComponentDesignItemID1=L_smd
+ComponentSymbolReference1=L_smd
+ComponentUpdate1=0
+ComponentIsDeviceSheet1=0
 FullReplace=1
 UpdateDesignatorLock=1
 UpdatePartIDLock=1
@@ -1050,6 +1079,52 @@ RemoveParameters=0
 AddModels=1
 RemoveModels=1
 UpdateCurrentModels=1
+ParameterName0=Comment
+ParameterUpdate0=1
+ParameterName1=Component Kind
+ParameterUpdate1=1
+ParameterName2=ComponentLink1Description
+ParameterUpdate2=1
+ParameterName3=ComponentLink1URL
+ParameterUpdate3=1
+ParameterName4=Description
+ParameterUpdate4=1
+ParameterName5=Library Reference
+ParameterUpdate5=1
+ParameterName6=Value
+ParameterUpdate6=1
+ParameterName7=Назначение
+ParameterUpdate7=1
+ParameterName8=Наименование
+ParameterUpdate8=1
+ParameterName9=Потребление, Вт
+ParameterUpdate9=1
+ModelTypeGroup0=PCBLIB
+ModelTypeUpdate0=1
+ModelType0=PCBLIB
+ModelName0=C_SMD_SIZE_B
+ModelUpdate0=1
+ModelType1=PCBLIB
+ModelName1=C_SMD_size_C
+ModelUpdate1=1
+ModelType2=PCBLIB
+ModelName2=CR-0402
+ModelUpdate2=1
+ModelType3=PCBLIB
+ModelName3=CR-0805
+ModelUpdate3=1
+ModelType4=PCBLIB
+ModelName4=CR-1206
+ModelUpdate4=1
+ModelType5=PCBLIB
+ModelName5=CR-1206-0805
+ModelUpdate5=1
+ModelType6=PCBLIB
+ModelName6=MSOP16
+ModelUpdate6=1
+ModelType7=PCBLIB
+ModelName7=XAL40xx
+ModelUpdate7=1
 
 [DatabaseUpdateOptions]
 SelectedOnly=0
@@ -1058,10 +1133,12 @@ UpdateToLatestRevision=1
 PartTypes=0
 
 [NetInfos]
-Net1=NetName=3V3|NetColor=$00FF6EFF
-Net2=NetName=5V|NetColor=$006E6EFF
-Net3=NetName=-5V|NetColor=$00FF6E6E
-Net4=NetName=GND|NetColor=$006EFF6E
+Net1=NetName=2V5|NetColor=$009999FF
+Net2=NetName=2V5_REF|NetColor=$0033FFCC
+Net3=NetName=3V3|NetColor=$00FF6EFF
+Net4=NetName=5V|NetColor=$006E6EFF
+Net5=NetName=-5V|NetColor=$00FF6E6E
+Net6=NetName=GND|NetColor=$006EFF6E
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=0|UseName=-1|InclAllRules=0
