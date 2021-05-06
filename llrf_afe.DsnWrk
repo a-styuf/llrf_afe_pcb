@@ -1,0 +1,10 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=llrf_afe.PrjPcb
+[Project2]
+ProjectPath=..\..\AD_lib\Components\Sch\Passive\Passive.LibPkg
+[Project3]
+ProjectPath=..\..\AD_lib\Components\Sch\Connector\Connector.LibPkg
+[Project4]
+ProjectPath=..\..\AD_lib\Components\Sch\IC\FPGA\FPGA.LibPkg
