@@ -8,3 +8,11 @@ ProjectPath=..\..\AD_lib\Components\Sch\Passive\Passive.LibPkg
 ProjectPath=..\..\AD_lib\Components\Sch\Connector\Connector.LibPkg
 [Project4]
 ProjectPath=..\..\AD_lib\Components\Sch\IC\FPGA\FPGA.LibPkg
+[Project5]
+ProjectPath=..\..\..\..\Documents\Проекты COSY\От Фатькина\NICA\PCB-2Version\NICAControl.PrjPCB
+[Project6]
+ProjectPath=..\..\AD_lib\Components\Sch\Oscilator\Oscillator.LibPkg
+[Project7]
+ProjectPath=..\..\AD_lib\Components\Sch\Transformer\Transformer.LibPkg
+[Project8]
+ProjectPath=..\..\AD_lib\Components\Sch\Diod\Diod.LibPkg
