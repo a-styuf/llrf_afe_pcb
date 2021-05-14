@@ -1,1 +1,1 @@
-RIO_BUS=out_3v3[1..16],in_3v3[1..16]
+RIO_BUS=io_out[0..7],io_in[0..7]

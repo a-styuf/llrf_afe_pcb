@@ -16,3 +16,7 @@ ProjectPath=..\..\AD_lib\Components\Sch\Oscilator\Oscillator.LibPkg
 ProjectPath=..\..\AD_lib\Components\Sch\Transformer\Transformer.LibPkg
 [Project8]
 ProjectPath=..\..\AD_lib\Components\Sch\Diod\Diod.LibPkg
+[Project9]
+ProjectPath=..\..\AD_lib\Components\Sch\IC\Amplifier\Amplifier.LibPkg
+[Project10]
+ProjectPath=..\..\AD_lib\Components\Sch\IC\Logic\Logic.LibPkg
