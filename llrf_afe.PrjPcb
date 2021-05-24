@@ -1985,155 +1985,159 @@ Net196=NetName=FMC_TD0|NetColor=$0066FFCC
 Net197=NetName=FMC_TDI|NetColor=$0066FFCC
 Net198=NetName=FMC_TMS|NetColor=$0066FFCC
 Net199=NetName=FMC_TRST#|NetColor=$0066FFCC
-Net200=NetName=GND|NetColor=$006EFF6E
-Net201=NetName=JTAGEN|NetColor=$0066FFCC
-Net202=NetName=MAX_SPI_FMC.SYS_C\S\|NetColor=clYellow
-Net203=NetName=MAX_SPI_FMC.SYS_MISO|NetColor=clYellow
-Net204=NetName=MAX_SPI_FMC.SYS_MOSI|NetColor=clYellow
-Net205=NetName=MAX_SPI_FMC.SYS_SCLK|NetColor=clYellow
-Net206=NetName=MAX_SYS_FMC.CONF_DONE|NetColor=$0066FFCC
-Net207=NetName=MAX_SYS_FMC.CONF_SEL|NetColor=$0066FFCC
-Net208=NetName=MAX_SYS_FMC.CRC_ERROR|NetColor=$0066FFCC
-Net209=NetName=MAX_SYS_FMC.DEV_CLRn|NetColor=$0066FFCC
-Net210=NetName=MAX_SYS_FMC.DEV_OE|NetColor=$0066FFCC
-Net211=NetName=MAX_SYS_FMC.JTAGEN|NetColor=$0066FFCC
-Net212=NetName=MAX_SYS_FMC.nSTATUS|NetColor=$0066FFCC
-Net213=NetName=MAX_SYS_FMC.TCK|NetColor=$0066FFCC
-Net214=NetName=MAX_SYS_FMC.TDI|NetColor=$0066FFCC
-Net215=NetName=MAX_SYS_FMC.TDO|NetColor=$0066FFCC
-Net216=NetName=MAX_SYS_FMC.TMS|NetColor=$0066FFCC
-Net217=NetName=MFM BUS.BUSY|NetColor=$00807CFF
-Net218=NetName=MFM BUS.CNV|NetColor=$00807CFF
-Net219=NetName=MFM BUS.MFM_A0|NetColor=$009999EA
-Net220=NetName=MFM BUS.MFM_A1|NetColor=$009999FF
-Net221=NetName=MFM BUS.MFM_B-|NetColor=$009999EA
-Net222=NetName=MFM BUS.MFM_B_REF|NetColor=$009999EA
-Net223=NetName=MFM BUS.MFM_B_RSRV|NetColor=$009999EA
-Net224=NetName=MFM BUS.MFM_B+|NetColor=$009999EA
-Net225=NetName=MFM BUS.MFM_BUSY|NetColor=$009999FF
-Net226=NetName=MFM BUS.MFM_CNV|NetColor=$009999FF
-Net227=NetName=MFM BUS.MFM_SCK|NetColor=$009999FF
-Net228=NetName=MFM BUS.MFM_SDO|NetColor=$009999FF
-Net229=NetName=MFM BUS.SCK|NetColor=$00807CFF
-Net230=NetName=MFM BUS.SDO|NetColor=$00807CFF
-Net231=NetName=MFM_A0|NetColor=$009999EA
-Net232=NetName=MFM_A1|NetColor=$009999FF
-Net233=NetName=MFM_B-|NetColor=$009999EA
-Net234=NetName=MFM_B_REF|NetColor=$009999EA
-Net235=NetName=MFM_B_RSRV|NetColor=$009999EA
-Net236=NetName=MFM_B+|NetColor=$009999EA
-Net237=NetName=MFM_BUSY|NetColor=$009999FF
-Net238=NetName=MFM_CNV|NetColor=$009999FF
-Net239=NetName=MFM_FMC.B-|NetColor=$005050FF
-Net240=NetName=MFM_FMC.B_REF|NetColor=$005050FF
-Net241=NetName=MFM_FMC.B_RSRV|NetColor=$005050FF
-Net242=NetName=MFM_FMC.B+|NetColor=$005050FF
-Net243=NetName=MFM_FMC.BUSY|NetColor=$005050FF
-Net244=NetName=MFM_FMC.CNV|NetColor=$005050FF
-Net245=NetName=MFM_FMC.MFM_A0|NetColor=$005050FF
-Net246=NetName=MFM_FMC.MFM_A1|NetColor=$005050FF
-Net247=NetName=MFM_FMC.SCK|NetColor=$005050FF
-Net248=NetName=MFM_FMC.SDO|NetColor=$005050FF
-Net249=NetName=MFM_SCK|NetColor=$009999FF
-Net250=NetName=MFM_SDO|NetColor=$009999FF
-Net251=NetName=NetR?_1|NetColor=$009999EA
-Net252=NetName=NetR_SCL?_1|NetColor=$00D4D37C
-Net253=NetName=NetR_SCL1_1|NetColor=$005BB0FF
-Net254=NetName=NetR_SCL2_1|NetColor=$005BB0FF
-Net255=NetName=NetR_SCL3_1|NetColor=$005BB0FF
-Net256=NetName=NetR_SCL4_1|NetColor=$005BB0FF
-Net257=NetName=NetR_SCL5_1|NetColor=$005BB0FF
-Net258=NetName=NetR_SDA?_1|NetColor=$00D4D37C
-Net259=NetName=NetR_SDA1_1|NetColor=$005BB0FF
-Net260=NetName=NetR_SDA2_1|NetColor=$005BB0FF
-Net261=NetName=NetR_SDA3_1|NetColor=$005BB0FF
-Net262=NetName=NetR_SDA4_1|NetColor=$005BB0FF
-Net263=NetName=NetR_SDA5_1|NetColor=$005BB0FF
-Net264=NetName=NetR108_1|NetColor=$005BB0FF
-Net265=NetName=NetR114_1|NetColor=$005BB0FF
-Net266=NetName=NetR120_1|NetColor=$005BB0FF
-Net267=NetName=NetR126_1|NetColor=$005BB0FF
-Net268=NetName=NetR132_1|NetColor=$005BB0FF
-Net269=NetName=NetR41_1|NetColor=$009999EA
-Net270=NetName=NetU14_A12|NetColor=$009999FF
-Net271=NetName=NetU14_A13|NetColor=$009999FF
-Net272=NetName=NetU14_A17|NetColor=$009999FF
-Net273=NetName=NetU14_B11|NetColor=$009999FF
-Net274=NetName=NetU14_B12|NetColor=$009999FF
-Net275=NetName=NetU14_C11|NetColor=$009999FF
-Net276=NetName=NetU14_C17|NetColor=$009999EA
-Net277=NetName=NetU14_D17|NetColor=$009999EA
-Net278=NetName=NetU14_E18|NetColor=$009999EA
-Net279=NetName=NetU14_F16|NetColor=$005BB0FF
-Net280=NetName=NetU14_F18|NetColor=$009999EA
-Net281=NetName=NetU14_G16|NetColor=$005BB0FF
-Net282=NetName=NetU14_H16|NetColor=$005BB0FF
-Net283=NetName=NetU14_T12|NetColor=$0091568C
-Net284=NetName=NetU14_U16|NetColor=$0091568C
-Net285=NetName=NetU14_U17|NetColor=$0091568C
-Net286=NetName=NetU14_V15|NetColor=$0091568C
-Net287=NetName=NetU14_V16|NetColor=$0091568C
-Net288=NetName=NetU14_V17|NetColor=$0091568C
-Net289=NetName=nSTATUS|NetColor=$0066FFCC
-Net290=NetName=PLL_BUS.C\S\|NetColor=$0091568C
-Net291=NetName=PLL_BUS.R\E\S\E\T\|NetColor=$0091568C
-Net292=NetName=PLL_BUS.REF_SEL|NetColor=$0091568C
-Net293=NetName=PLL_BUS.SCLK|NetColor=$0091568C
-Net294=NetName=PLL_BUS.SDI|NetColor=$0091568C
-Net295=NetName=PLL_BUS.SDO|NetColor=$0091568C
-Net296=NetName=PLL_BUS.STATUS0|NetColor=$0091568C
-Net297=NetName=PLL_BUS.STATUS1|NetColor=$0091568C
-Net298=NetName=PLL_FMC.C\S\|NetColor=$00AD7500
-Net299=NetName=PLL_FMC.R\E\S\E\T\|NetColor=$00AD7500
-Net300=NetName=PLL_FMC.REF_SEL|NetColor=$00AD7500
-Net301=NetName=PLL_FMC.REL_SEL|NetColor=$00AD7500
-Net302=NetName=PLL_FMC.SCLK|NetColor=$00AD7500
-Net303=NetName=PLL_FMC.SDI|NetColor=$00AD7500
-Net304=NetName=PLL_FMC.SDO|NetColor=$00AD7500
-Net305=NetName=PLL_FMC.STATUS0|NetColor=$00AD7500
-Net306=NetName=PLL_FMC.STATUS1|NetColor=$00AD7500
-Net307=NetName=PWR_ALERT|NetColor=$00666600
-Net308=NetName=R\E\S\E\T\|NetColor=$0091568C
-Net309=NetName=REF_SEL|NetColor=$0091568C
-Net310=NetName=RIO_FMC.fmc_io_in0|NetColor=$009A72A6
-Net311=NetName=RIO_FMC.fmc_io_in1|NetColor=$009A72A6
-Net312=NetName=RIO_FMC.fmc_io_in2|NetColor=$009A72A6
-Net313=NetName=RIO_FMC.fmc_io_in3|NetColor=$009A72A6
-Net314=NetName=RIO_FMC.fmc_io_in4|NetColor=$009A72A6
-Net315=NetName=RIO_FMC.fmc_io_in5|NetColor=$009A72A6
-Net316=NetName=RIO_FMC.fmc_io_in6|NetColor=$009A72A6
-Net317=NetName=RIO_FMC.fmc_io_in7|NetColor=$009A72A6
-Net318=NetName=RIO_FMC.fmc_io_out0|NetColor=$009A72A6
-Net319=NetName=RIO_FMC.fmc_io_out1|NetColor=$009A72A6
-Net320=NetName=RIO_FMC.fmc_io_out2|NetColor=$009A72A6
-Net321=NetName=RIO_FMC.fmc_io_out3|NetColor=$009A72A6
-Net322=NetName=RIO_FMC.fmc_io_out4|NetColor=$009A72A6
-Net323=NetName=RIO_FMC.fmc_io_out5|NetColor=$009A72A6
-Net324=NetName=RIO_FMC.fmc_io_out6|NetColor=$009A72A6
-Net325=NetName=RIO_FMC.fmc_io_out7|NetColor=$009A72A6
-Net326=NetName=SCK|NetColor=$00807CFF
-Net327=NetName=SCL|NetColor=$005BB0FF
-Net328=NetName=SCLK|NetColor=$0091568C
-Net329=NetName=SDA|NetColor=$005BB0FF
-Net330=NetName=SDI|NetColor=$0091568C
-Net331=NetName=SDO|NetColor=$0091568C
-Net332=NetName=SLEEP|NetColor=$00669933
-Net333=NetName=SLEEP_dds_ch1|NetColor=$00669933
-Net334=NetName=STATUS0|NetColor=$0091568C
-Net335=NetName=STATUS1|NetColor=$0091568C
-Net336=NetName=SYS_C\S\|NetColor=clYellow
-Net337=NetName=SYS_CLK_N|NetColor=$00FF6EFF
-Net338=NetName=SYS_CLK_P|NetColor=$00FF6EFF
-Net339=NetName=SYS_I2C.ALERT|NetColor=$005BB0FF
-Net340=NetName=SYS_I2C.SCL|NetColor=$005BB0FF
-Net341=NetName=SYS_I2C.SDA|NetColor=$005BB0FF
-Net342=NetName=SYS_I2C_FMC.ALERT|NetColor=$003891E6
-Net343=NetName=SYS_I2C_FMC.SCL|NetColor=$003891E6
-Net344=NetName=SYS_I2C_FMC.SDA|NetColor=$003891E6
-Net345=NetName=SYS_MISO|NetColor=clYellow
-Net346=NetName=SYS_MOSI|NetColor=clYellow
-Net347=NetName=SYS_SCLK|NetColor=clYellow
-Net348=NetName=VCC_ADJ|NetColor=$0000D9FF
+Net200=NetName=FPGA_RX|NetColor=$0066D9FF
+Net201=NetName=FPGA_TX|NetColor=$0066D9FF
+Net202=NetName=GND|NetColor=$006EFF6E
+Net203=NetName=JTAGEN|NetColor=$0066FFCC
+Net204=NetName=MAX_SPI_FMC.SYS_C\S\|NetColor=clYellow
+Net205=NetName=MAX_SPI_FMC.SYS_MISO|NetColor=clYellow
+Net206=NetName=MAX_SPI_FMC.SYS_MOSI|NetColor=clYellow
+Net207=NetName=MAX_SPI_FMC.SYS_SCLK|NetColor=clYellow
+Net208=NetName=MAX_SYS_FMC.CONF_DONE|NetColor=$0066FFCC
+Net209=NetName=MAX_SYS_FMC.CONF_SEL|NetColor=$0066FFCC
+Net210=NetName=MAX_SYS_FMC.CRC_ERROR|NetColor=$0066FFCC
+Net211=NetName=MAX_SYS_FMC.DEV_CLRn|NetColor=$0066FFCC
+Net212=NetName=MAX_SYS_FMC.DEV_OE|NetColor=$0066FFCC
+Net213=NetName=MAX_SYS_FMC.JTAGEN|NetColor=$0066FFCC
+Net214=NetName=MAX_SYS_FMC.nSTATUS|NetColor=$0066FFCC
+Net215=NetName=MAX_SYS_FMC.TCK|NetColor=$0066FFCC
+Net216=NetName=MAX_SYS_FMC.TDI|NetColor=$0066FFCC
+Net217=NetName=MAX_SYS_FMC.TDO|NetColor=$0066FFCC
+Net218=NetName=MAX_SYS_FMC.TMS|NetColor=$0066FFCC
+Net219=NetName=MFM BUS.BUSY|NetColor=$00807CFF
+Net220=NetName=MFM BUS.CNV|NetColor=$00807CFF
+Net221=NetName=MFM BUS.MFM_A0|NetColor=$009999EA
+Net222=NetName=MFM BUS.MFM_A1|NetColor=$009999FF
+Net223=NetName=MFM BUS.MFM_B-|NetColor=$009999EA
+Net224=NetName=MFM BUS.MFM_B_REF|NetColor=$009999EA
+Net225=NetName=MFM BUS.MFM_B_RSRV|NetColor=$009999EA
+Net226=NetName=MFM BUS.MFM_B+|NetColor=$009999EA
+Net227=NetName=MFM BUS.MFM_BUSY|NetColor=$009999FF
+Net228=NetName=MFM BUS.MFM_CNV|NetColor=$009999FF
+Net229=NetName=MFM BUS.MFM_SCK|NetColor=$009999FF
+Net230=NetName=MFM BUS.MFM_SDO|NetColor=$009999FF
+Net231=NetName=MFM BUS.SCK|NetColor=$00807CFF
+Net232=NetName=MFM BUS.SDO|NetColor=$00807CFF
+Net233=NetName=MFM_A0|NetColor=$009999EA
+Net234=NetName=MFM_A1|NetColor=$009999FF
+Net235=NetName=MFM_B-|NetColor=$009999EA
+Net236=NetName=MFM_B_REF|NetColor=$009999EA
+Net237=NetName=MFM_B_RSRV|NetColor=$009999EA
+Net238=NetName=MFM_B+|NetColor=$009999EA
+Net239=NetName=MFM_BUSY|NetColor=$009999FF
+Net240=NetName=MFM_CNV|NetColor=$009999FF
+Net241=NetName=MFM_FMC.B-|NetColor=$005050FF
+Net242=NetName=MFM_FMC.B_REF|NetColor=$005050FF
+Net243=NetName=MFM_FMC.B_RSRV|NetColor=$005050FF
+Net244=NetName=MFM_FMC.B+|NetColor=$005050FF
+Net245=NetName=MFM_FMC.BUSY|NetColor=$005050FF
+Net246=NetName=MFM_FMC.CNV|NetColor=$005050FF
+Net247=NetName=MFM_FMC.MFM_A0|NetColor=$005050FF
+Net248=NetName=MFM_FMC.MFM_A1|NetColor=$005050FF
+Net249=NetName=MFM_FMC.SCK|NetColor=$005050FF
+Net250=NetName=MFM_FMC.SDO|NetColor=$005050FF
+Net251=NetName=MFM_SCK|NetColor=$009999FF
+Net252=NetName=MFM_SDO|NetColor=$009999FF
+Net253=NetName=NetR?_1|NetColor=$009999EA
+Net254=NetName=NetR_SCL?_1|NetColor=$00D4D37C
+Net255=NetName=NetR_SCL1_1|NetColor=$005BB0FF
+Net256=NetName=NetR_SCL2_1|NetColor=$005BB0FF
+Net257=NetName=NetR_SCL3_1|NetColor=$005BB0FF
+Net258=NetName=NetR_SCL4_1|NetColor=$005BB0FF
+Net259=NetName=NetR_SCL5_1|NetColor=$005BB0FF
+Net260=NetName=NetR_SDA?_1|NetColor=$00D4D37C
+Net261=NetName=NetR_SDA1_1|NetColor=$005BB0FF
+Net262=NetName=NetR_SDA2_1|NetColor=$005BB0FF
+Net263=NetName=NetR_SDA3_1|NetColor=$005BB0FF
+Net264=NetName=NetR_SDA4_1|NetColor=$005BB0FF
+Net265=NetName=NetR_SDA5_1|NetColor=$005BB0FF
+Net266=NetName=NetR108_1|NetColor=$005BB0FF
+Net267=NetName=NetR114_1|NetColor=$005BB0FF
+Net268=NetName=NetR120_1|NetColor=$005BB0FF
+Net269=NetName=NetR126_1|NetColor=$005BB0FF
+Net270=NetName=NetR132_1|NetColor=$005BB0FF
+Net271=NetName=NetR41_1|NetColor=$009999EA
+Net272=NetName=NetU?_10|NetColor=$0066D9FF
+Net273=NetName=NetU?_7|NetColor=$0066D9FF
+Net274=NetName=NetU14_A12|NetColor=$009999FF
+Net275=NetName=NetU14_A13|NetColor=$009999FF
+Net276=NetName=NetU14_A17|NetColor=$009999FF
+Net277=NetName=NetU14_B11|NetColor=$009999FF
+Net278=NetName=NetU14_B12|NetColor=$009999FF
+Net279=NetName=NetU14_C11|NetColor=$009999FF
+Net280=NetName=NetU14_C17|NetColor=$009999EA
+Net281=NetName=NetU14_D17|NetColor=$009999EA
+Net282=NetName=NetU14_E18|NetColor=$009999EA
+Net283=NetName=NetU14_F16|NetColor=$005BB0FF
+Net284=NetName=NetU14_F18|NetColor=$009999EA
+Net285=NetName=NetU14_G16|NetColor=$005BB0FF
+Net286=NetName=NetU14_H16|NetColor=$005BB0FF
+Net287=NetName=NetU14_T12|NetColor=$0091568C
+Net288=NetName=NetU14_U16|NetColor=$0091568C
+Net289=NetName=NetU14_U17|NetColor=$0091568C
+Net290=NetName=NetU14_V15|NetColor=$0091568C
+Net291=NetName=NetU14_V16|NetColor=$0091568C
+Net292=NetName=NetU14_V17|NetColor=$0091568C
+Net293=NetName=nSTATUS|NetColor=$0066FFCC
+Net294=NetName=PLL_BUS.C\S\|NetColor=$0091568C
+Net295=NetName=PLL_BUS.R\E\S\E\T\|NetColor=$0091568C
+Net296=NetName=PLL_BUS.REF_SEL|NetColor=$0091568C
+Net297=NetName=PLL_BUS.SCLK|NetColor=$0091568C
+Net298=NetName=PLL_BUS.SDI|NetColor=$0091568C
+Net299=NetName=PLL_BUS.SDO|NetColor=$0091568C
+Net300=NetName=PLL_BUS.STATUS0|NetColor=$0091568C
+Net301=NetName=PLL_BUS.STATUS1|NetColor=$0091568C
+Net302=NetName=PLL_FMC.C\S\|NetColor=$00AD7500
+Net303=NetName=PLL_FMC.R\E\S\E\T\|NetColor=$00AD7500
+Net304=NetName=PLL_FMC.REF_SEL|NetColor=$00AD7500
+Net305=NetName=PLL_FMC.REL_SEL|NetColor=$00AD7500
+Net306=NetName=PLL_FMC.SCLK|NetColor=$00AD7500
+Net307=NetName=PLL_FMC.SDI|NetColor=$00AD7500
+Net308=NetName=PLL_FMC.SDO|NetColor=$00AD7500
+Net309=NetName=PLL_FMC.STATUS0|NetColor=$00AD7500
+Net310=NetName=PLL_FMC.STATUS1|NetColor=$00AD7500
+Net311=NetName=PWR_ALERT|NetColor=$00666600
+Net312=NetName=R\E\S\E\T\|NetColor=$0091568C
+Net313=NetName=REF_SEL|NetColor=$0091568C
+Net314=NetName=RIO_FMC.fmc_io_in0|NetColor=$009A72A6
+Net315=NetName=RIO_FMC.fmc_io_in1|NetColor=$009A72A6
+Net316=NetName=RIO_FMC.fmc_io_in2|NetColor=$009A72A6
+Net317=NetName=RIO_FMC.fmc_io_in3|NetColor=$009A72A6
+Net318=NetName=RIO_FMC.fmc_io_in4|NetColor=$009A72A6
+Net319=NetName=RIO_FMC.fmc_io_in5|NetColor=$009A72A6
+Net320=NetName=RIO_FMC.fmc_io_in6|NetColor=$009A72A6
+Net321=NetName=RIO_FMC.fmc_io_in7|NetColor=$009A72A6
+Net322=NetName=RIO_FMC.fmc_io_out0|NetColor=$009A72A6
+Net323=NetName=RIO_FMC.fmc_io_out1|NetColor=$009A72A6
+Net324=NetName=RIO_FMC.fmc_io_out2|NetColor=$009A72A6
+Net325=NetName=RIO_FMC.fmc_io_out3|NetColor=$009A72A6
+Net326=NetName=RIO_FMC.fmc_io_out4|NetColor=$009A72A6
+Net327=NetName=RIO_FMC.fmc_io_out5|NetColor=$009A72A6
+Net328=NetName=RIO_FMC.fmc_io_out6|NetColor=$009A72A6
+Net329=NetName=RIO_FMC.fmc_io_out7|NetColor=$009A72A6
+Net330=NetName=SCK|NetColor=$00807CFF
+Net331=NetName=SCL|NetColor=$005BB0FF
+Net332=NetName=SCLK|NetColor=$0091568C
+Net333=NetName=SDA|NetColor=$005BB0FF
+Net334=NetName=SDI|NetColor=$0091568C
+Net335=NetName=SDO|NetColor=$0091568C
+Net336=NetName=SLEEP|NetColor=$00669933
+Net337=NetName=SLEEP_dds_ch1|NetColor=$00669933
+Net338=NetName=STATUS0|NetColor=$0091568C
+Net339=NetName=STATUS1|NetColor=$0091568C
+Net340=NetName=SYS_C\S\|NetColor=clYellow
+Net341=NetName=SYS_CLK_N|NetColor=$00FF6EFF
+Net342=NetName=SYS_CLK_P|NetColor=$00FF6EFF
+Net343=NetName=SYS_I2C.ALERT|NetColor=$005BB0FF
+Net344=NetName=SYS_I2C.SCL|NetColor=$005BB0FF
+Net345=NetName=SYS_I2C.SDA|NetColor=$005BB0FF
+Net346=NetName=SYS_I2C_FMC.ALERT|NetColor=$003891E6
+Net347=NetName=SYS_I2C_FMC.SCL|NetColor=$003891E6
+Net348=NetName=SYS_I2C_FMC.SDA|NetColor=$003891E6
+Net349=NetName=SYS_MISO|NetColor=clYellow
+Net350=NetName=SYS_MOSI|NetColor=clYellow
+Net351=NetName=SYS_SCLK|NetColor=clYellow
+Net352=NetName=VCC_ADJ|NetColor=$0000D9FF
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=0|UseName=-1|InclAllRules=0

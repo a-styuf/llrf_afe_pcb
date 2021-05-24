@@ -22,3 +22,7 @@ ProjectPath=..\..\AD_lib\Components\Sch\IC\Amplifier\Amplifier.LibPkg
 ProjectPath=..\..\AD_lib\Components\Sch\IC\Logic\Logic.LibPkg
 [Project11]
 ProjectPath=..\..\AD_lib\Components\Sch\Sensor\Sensor.LibPkg
+[Project12]
+ProjectPath=..\..\AD_lib\Components\Sch\IC\USB\USB.LibPkg
+[Project13]
+ProjectPath=..\..\NSU\Норби\Модуль сопряжения\norbi_linking_module\norbi_lm.PrjPcb
