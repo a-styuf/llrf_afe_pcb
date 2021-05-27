@@ -7,22 +7,14 @@ ProjectPath=..\..\AD_lib\Components\Sch\Passive\Passive.LibPkg
 [Project3]
 ProjectPath=..\..\AD_lib\Components\Sch\Connector\Connector.LibPkg
 [Project4]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\FPGA\FPGA.LibPkg
-[Project5]
 ProjectPath=..\..\..\..\Documents\Проекты COSY\От Фатькина\NICA\PCB-2Version\NICAControl.PrjPCB
+[Project5]
+ProjectPath=..\..\AD_lib\Components\Sch\IC\ADC\Adc.LibPkg
 [Project6]
-ProjectPath=..\..\AD_lib\Components\Sch\Oscilator\Oscillator.LibPkg
+ProjectPath=..\..\AD_lib\Components\Sch\IC\DAC\Dac.LibPkg
 [Project7]
-ProjectPath=..\..\AD_lib\Components\Sch\Transformer\Transformer.LibPkg
-[Project8]
-ProjectPath=..\..\AD_lib\Components\Sch\Diod\Diod.LibPkg
-[Project9]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\Amplifier\Amplifier.LibPkg
-[Project10]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\Logic\Logic.LibPkg
-[Project11]
 ProjectPath=..\..\AD_lib\Components\Sch\Sensor\Sensor.LibPkg
-[Project12]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\USB\USB.LibPkg
-[Project13]
-ProjectPath=..\..\NSU\Норби\Модуль сопряжения\norbi_linking_module\norbi_lm.PrjPcb
+[Project8]
+ProjectPath=..\..\AD_lib\Components\Sch\Power\Linear_Converter\Linear_Converter.LibPkg
+[Project9]
+ProjectPath=..\..\AD_lib\Components\Sch\Oscilator\Oscillator.LibPkg
