@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 12:31:37 On 28.05.2021
+
+Output: BOM
+Type  : BOM
+From  : Variant [[No Variations]] of Project [llrf_afe.PrjPcb]
+   Generated File[llrf_afe.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 12:31:41 On 28.05.2021
