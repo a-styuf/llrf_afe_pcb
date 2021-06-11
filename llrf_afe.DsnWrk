@@ -18,3 +18,5 @@ ProjectPath=..\..\AD_lib\Components\Sch\Sensor\Sensor.LibPkg
 ProjectPath=..\..\AD_lib\Components\Sch\Power\Linear_Converter\Linear_Converter.LibPkg
 [Project9]
 ProjectPath=..\..\AD_lib\Components\Sch\Oscilator\Oscillator.LibPkg
+[Project10]
+ProjectPath=..\..\AD_lib\Components\Sch\IC\USB\USB.LibPkg
