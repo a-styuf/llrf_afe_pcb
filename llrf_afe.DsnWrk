@@ -3,20 +3,20 @@ Version=1.0
 [Project1]
 ProjectPath=llrf_afe.PrjPcb
 [Project2]
-ProjectPath=..\..\AD_lib\Components\Sch\Passive\Passive.LibPkg
-[Project3]
 ProjectPath=..\..\AD_lib\Components\Sch\Connector\Connector.LibPkg
-[Project4]
+[Project3]
 ProjectPath=..\..\..\..\Documents\Проекты COSY\От Фатькина\NICA\PCB-2Version\NICAControl.PrjPCB
-[Project5]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\ADC\Adc.LibPkg
-[Project6]
+[Project4]
 ProjectPath=..\..\AD_lib\Components\Sch\IC\DAC\Dac.LibPkg
-[Project7]
+[Project5]
 ProjectPath=..\..\AD_lib\Components\Sch\Sensor\Sensor.LibPkg
-[Project8]
-ProjectPath=..\..\AD_lib\Components\Sch\Power\Linear_Converter\Linear_Converter.LibPkg
-[Project9]
+[Project6]
 ProjectPath=..\..\AD_lib\Components\Sch\Oscilator\Oscillator.LibPkg
-[Project10]
+[Project7]
 ProjectPath=..\..\AD_lib\Components\Sch\IC\USB\USB.LibPkg
+[Project8]
+ProjectPath=..\..\AD_lib\Components\Sch\IC\FPGA\FPGA.LibPkg
+[Project9]
+ProjectPath=..\..\AD_lib\Components\Sch\IC\Logic\Logic.LibPkg
+[Project10]
+ProjectPath=..\..\NSU\Норби\Модуль сопряжения\norbi_linking_module\norbi_lm.PrjPcb
