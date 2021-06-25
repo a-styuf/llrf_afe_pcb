@@ -19,4 +19,6 @@ ProjectPath=..\..\AD_lib\Components\Sch\IC\FPGA\FPGA.LibPkg
 [Project9]
 ProjectPath=..\..\AD_lib\Components\Sch\IC\Logic\Logic.LibPkg
 [Project10]
-ProjectPath=..\..\NSU\Норби\Модуль сопряжения\norbi_linking_module\norbi_lm.PrjPcb
+ProjectPath=..\..\AD_lib\Components\Sch\IC\Memory\Memory.LibPkg
+[Project11]
+ProjectPath=..\..\AD_lib\Components\Sch\Passive\Passive.LibPkg
