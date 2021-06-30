@@ -13,12 +13,8 @@ ProjectPath=..\..\AD_lib\Components\Sch\Sensor\Sensor.LibPkg
 [Project6]
 ProjectPath=..\..\AD_lib\Components\Sch\Oscilator\Oscillator.LibPkg
 [Project7]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\USB\USB.LibPkg
+ProjectPath=..\..\..\..\Documents\Проекты COSY\Projects\VME-CAN\from MamkinV\altium\vme_can_pcb_v3\vme_can_pcb_v3.PrjPcb
 [Project8]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\FPGA\FPGA.LibPkg
+ProjectPath=..\..\AD_lib\Components\Sch\IC\Amplifier\Amplifier.LibPkg
 [Project9]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\Logic\Logic.LibPkg
-[Project10]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\Memory\Memory.LibPkg
-[Project11]
-ProjectPath=..\..\AD_lib\Components\Sch\Passive\Passive.LibPkg
+ProjectPath=..\..\AD_lib\Components\Sch\IC\Converter\Converter.LibPkg
