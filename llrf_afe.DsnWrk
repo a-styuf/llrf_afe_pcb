@@ -18,3 +18,5 @@ ProjectPath=..\..\..\..\Documents\Проекты COSY\Projects\VME-CAN\from MamkinV\alt
 ProjectPath=..\..\AD_lib\Components\Sch\IC\Amplifier\Amplifier.LibPkg
 [Project9]
 ProjectPath=..\..\AD_lib\Components\Sch\IC\Converter\Converter.LibPkg
+[Project10]
+ProjectPath=..\..\..\..\Documents\Проекты COSY\Projects\VME-CAN\from MamkinV\altium\bivme2_V2\Documents\Documents.PrjPcb
