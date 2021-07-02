@@ -1,22 +1,4 @@
 [ProjectGroup]
 Version=1.0
 [Project1]
-ProjectPath=llrf_afe.PrjPcb
-[Project2]
-ProjectPath=..\..\AD_lib\Components\Sch\Connector\Connector.LibPkg
-[Project3]
-ProjectPath=..\..\..\..\Documents\Проекты COSY\От Фатькина\NICA\PCB-2Version\NICAControl.PrjPCB
-[Project4]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\DAC\Dac.LibPkg
-[Project5]
-ProjectPath=..\..\AD_lib\Components\Sch\Sensor\Sensor.LibPkg
-[Project6]
-ProjectPath=..\..\AD_lib\Components\Sch\Oscilator\Oscillator.LibPkg
-[Project7]
 ProjectPath=..\..\..\..\Documents\Проекты COSY\Projects\VME-CAN\from MamkinV\altium\vme_can_pcb_v3\vme_can_pcb_v3.PrjPcb
-[Project8]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\Amplifier\Amplifier.LibPkg
-[Project9]
-ProjectPath=..\..\AD_lib\Components\Sch\IC\Converter\Converter.LibPkg
-[Project10]
-ProjectPath=..\..\..\..\Documents\Проекты COSY\Projects\VME-CAN\from MamkinV\altium\bivme2_V2\Documents\Documents.PrjPcb
