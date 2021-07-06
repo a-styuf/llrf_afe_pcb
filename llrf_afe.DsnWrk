@@ -1,4 +1,6 @@
 [ProjectGroup]
 Version=1.0
 [Project1]
-ProjectPath=..\..\..\..\Documents\Проекты COSY\Projects\VME-CAN\from MamkinV\altium\vme_can_pcb_v3\vme_can_pcb_v3.PrjPcb
+ProjectPath=llrf_afe.PrjPcb
+[Project2]
+ProjectPath=..\..\AD_lib\Components\Sch\Connector\Connector.LibPkg
