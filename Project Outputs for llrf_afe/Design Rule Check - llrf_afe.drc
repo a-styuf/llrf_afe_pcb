@@ -1,0 +1,68 @@
+Protel Design System Design Rule Check
+PCB File : D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc
+Date     : 09.07.2021
+Time     : 14:09:37
+
+ERROR : More than 30 violations detected, DRC was stopped
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad Free-MH1(7.275mm,-4.475mm) on MultiLayer on Net GND
+   Pad Free-MH3(6.1mm,80.125mm) on MultiLayer on Net GND
+   Pad Free-MH2(234.82mm,1.975mm) on MultiLayer on Net GND
+   Pad Free-MH4(234.82mm,91.505mm) on MultiLayer on Net GND
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (IsCopperRegion),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net REFA_P Between Pad J2-H37(298.68mm,33.11mm) on TopLayer [Unplated] And Pad C3-2(320.65mm,238.575mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net REFA_N Between Pad J2-H38(298.68mm,31.84mm) on TopLayer [Unplated] And Pad C4-1(318.925mm,240.275mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net REFA_P Between Pad J1-H37(230.6mm,33.11mm) on TopLayer [Unplated] And Pad J2-H37(298.68mm,33.11mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net REFA_N Between Pad J1-H38(230.6mm,31.84mm) on TopLayer [Unplated] And Pad J2-H38(298.68mm,31.84mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net NetR168_2 Between Pad R169-2(240.3mm,168.25mm) on TopLayer And Pad R168-2(241.212mm,166.865mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR168_2 Between Pad R168-2(241.212mm,166.865mm) on TopLayer And Pad X21-1(243.942mm,145.487mm) on MultiLayer 
+   Violation between Un-Routed Net Constraint: Net NetR201_1 Between Pad R204-2(546.625mm,409.783mm) on TopLayer And Pad R201-1(556.976mm,408.083mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR202_1 Between Pad R203-2(541.45mm,409.783mm) on TopLayer And Pad R202-1(551.8mm,408.083mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR205_1 Between Pad R208-2(320.741mm,162.778mm) on TopLayer And Pad R205-1(536.275mm,408.083mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR206_1 Between Pad R207-2(525.924mm,409.783mm) on TopLayer And Pad R206-1(531.099mm,408.083mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR230_1 Between Pad R231-1(315.683mm,174.094mm) on TopLayer And Pad R230-1(382.342mm,369.581mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR230_1 Between Pad R230-1(382.342mm,369.581mm) on TopLayer And Pad U36-3(440.145mm,418.108mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR231_2 Between Pad R231-2(313.983mm,174.094mm) on TopLayer And Pad R233-1(377.017mm,369.581mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR231_2 Between Pad R233-1(377.017mm,369.581mm) on TopLayer And Pad U36-4(440.145mm,417.659mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR235_1 Between Pad R243-1(87.699mm,429.475mm) on TopLayer And Pad R235-1(429.569mm,417.408mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR258_2 Between Pad R258-2(244.125mm,207.975mm) on BottomLayer And Pad U39-4(248.986mm,221mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR258_2 Between Pad U39-4(248.986mm,221mm) on TopLayer And Pad R260-1(377.017mm,374.256mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR273_1 Between Pad R276-2(254.161mm,185.225mm) on BottomLayer And Pad R273-1(562.626mm,431.409mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR274_1 Between Pad R275-2(-55.232mm,197.142mm) on BottomLayer And Pad R274-1(557.301mm,431.409mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR277_1 Between Pad R280-2(254.486mm,189.95mm) on BottomLayer And Pad R277-1(551.95mm,431.409mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR278_1 Between Pad R279-2(541.275mm,433.109mm) on TopLayer And Pad R278-1(546.6mm,431.409mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR302_1 Between Pad R302-1(382.342mm,378.932mm) on TopLayer And Pad R303-1(462.121mm,438.934mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR302_1 Between Pad U43-3(250.528mm,177.015mm) on TopLayer And Pad R302-1(382.342mm,378.932mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR303_2 Between Pad R305-1(377.017mm,378.932mm) on TopLayer And Pad R303-2(462.121mm,440.634mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR303_2 Between Pad U43-4(250.528mm,176.566mm) on TopLayer And Pad R305-1(377.017mm,378.932mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR329_1 Between Pad R329-1(382.342mm,383.607mm) on TopLayer And Pad R330-1(466.221mm,446.635mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR329_1 Between Pad R330-1(466.221mm,446.635mm) on TopLayer And Pad U46-3(476.947mm,447.335mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR330_2 Between Pad R332-1(377.017mm,383.607mm) on TopLayer And Pad R330-2(466.221mm,448.335mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR330_2 Between Pad R330-2(466.221mm,448.335mm) on TopLayer And Pad U46-4(476.947mm,446.885mm) on TopLayer 
+   Violation between Un-Routed Net Constraint: Net NetR334_1 Between Pad R342-1(387.517mm,446.635mm) on TopLayer And Pad R334-1(450.195mm,446.635mm) on TopLayer 
+Rule Violations :30
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=2mm) (Preferred=0.2mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.2mm) (Conductor Width=0.15mm) (Air Gap=0.2mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.2mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 30
+Waived Violations : 0
+Time Elapsed        : 00:00:01
