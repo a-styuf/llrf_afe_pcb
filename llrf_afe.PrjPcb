@@ -1,6 +1,6 @@
 ﻿[Design]
 Version=1.0
-HierarchyMode=0
+HierarchyMode=4
 ChannelRoomNamingStyle=0
 ReleasesFolder=
 ChannelDesignatorFormatString=$Component_$RoomName
@@ -12,7 +12,7 @@ SeparateFolders=0
 TemplateLocationPath=
 PinSwapBy_Netlabel=1
 PinSwapBy_Pin=1
-AllowPortNetNames=0
+AllowPortNetNames=1
 AllowSheetEntryNetNames=1
 AppendSheetNumberToLocalNets=0
 NetlistSinglePinNets=0
@@ -641,6 +641,10 @@ DItemRevisionGUID=
 
 [GeneratedDocument2]
 DocumentPath=Project Outputs for llrf_afe\BOM\llrf_afe.xlsx
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for llrf_afe\Move Component(s) Origin To Grid - llrf_afe.html
 DItemRevisionGUID=
 
 [Parameter1]
