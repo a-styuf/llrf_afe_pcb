@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc
-Date     : 09.08.2021
-Time     : 16:05:17
+Date     : 17.08.2021
+Time     : 15:27:47
 
 ERROR : More than 30 violations detected, DRC was stopped
 
@@ -11,55 +11,58 @@ WARNING: Unplated multi-layer pad(s) detected
    Pad Free-CASE(234.874mm,1.964mm) on MultiLayer on Net CASE
    Pad Free-CASE(234.874mm,91.494mm) on MultiLayer on Net CASE
 
-Processing Rule : Clearance Constraint (Gap=0.1mm) (WithinRoom('FPGA room')),(All)
-Rule Violations :0
-
 Processing Rule : Clearance Constraint (Gap=0.15mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=0.15mm) (IsCopperRegion),(All)
 Rule Violations :0
 
+Processing Rule : Clearance Constraint (Gap=0.1mm) (WithinRoom('FPGA room')),(All)
+Rule Violations :0
+
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A12(232.369mm,24.385mm) on TopLayer [Unplated] And Pad J1-A13(232.369mm,25.655mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A20(232.369mm,34.545mm) on TopLayer [Unplated] And Pad J1-A21(232.369mm,35.815mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A28(232.369mm,44.705mm) on TopLayer [Unplated] And Pad J1-A29(232.369mm,45.975mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A32(232.369mm,49.785mm) on TopLayer [Unplated] And Pad J1-A33(232.369mm,51.055mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A36(232.369mm,54.865mm) on TopLayer [Unplated] And Pad J1-A37(232.369mm,56.135mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A4(232.369mm,14.225mm) on TopLayer [Unplated] And Pad J1-A5(232.369mm,15.495mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A8(232.369mm,19.305mm) on TopLayer [Unplated] And Pad J1-A9(232.369mm,20.575mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B2(231.099mm,11.685mm) on TopLayer [Unplated] And Pad J1-B3(231.099mm,12.955mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B22(231.099mm,37.085mm) on TopLayer [Unplated] And Pad J1-B23(231.099mm,38.355mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B26(231.099mm,42.165mm) on TopLayer [Unplated] And Pad J1-B27(231.099mm,43.435mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B30(231.099mm,47.245mm) on TopLayer [Unplated] And Pad J1-B31(231.099mm,48.515mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B34(231.099mm,52.325mm) on TopLayer [Unplated] And Pad J1-B35(231.099mm,53.595mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B38(231.099mm,57.405mm) on TopLayer [Unplated] And Pad J1-B39(231.099mm,58.675mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B6(231.099mm,16.765mm) on TopLayer [Unplated] And Pad J1-B7(231.099mm,18.035mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-C16(229.829mm,29.465mm) on TopLayer [Unplated] And Pad J1-C17(229.829mm,30.735mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-C20(229.829mm,34.545mm) on TopLayer [Unplated] And Pad J1-C21(229.829mm,35.815mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-C24(229.829mm,39.625mm) on TopLayer [Unplated] And Pad J1-C25(229.829mm,40.895mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-C8(229.829mm,19.305mm) on TopLayer [Unplated] And Pad J1-C9(229.829mm,20.575mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-D2(228.559mm,11.685mm) on TopLayer [Unplated] And Pad J1-D3(228.559mm,12.955mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-E4(227.289mm,14.225mm) on TopLayer [Unplated] And Pad J1-E5(227.289mm,15.495mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-F2(226.019mm,11.685mm) on TopLayer [Unplated] And Pad J1-F3(226.019mm,12.955mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_VIO_B_fmc_reserve Between Pad J1-K40(220.939mm,59.945mm) on TopLayer [Unplated] And Pad J1-J39(222.209mm,58.675mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-K2(220.939mm,11.685mm) on TopLayer [Unplated] And Pad J1-K3(220.939mm,12.955mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_ADJ_fmc_main Between Pad J2-F40(331.864mm,60.019mm) on TopLayer [Unplated] And Pad J2-E39(333.134mm,58.749mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_ADJ_fmc_main Between Pad J2-G39(330.594mm,58.749mm) on TopLayer [Unplated] And Pad J2-E39(333.134mm,58.749mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_ADJ_fmc_main Between Pad J2-H40(329.324mm,60.019mm) on TopLayer [Unplated] And Pad J2-F40(331.864mm,60.019mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_VIO_B_fmc_main Between Pad J2-K40(326.784mm,60.019mm) on TopLayer [Unplated] And Pad J2-J39(328.054mm,58.749mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A12(232.715mm,26.205mm) on TopLayer [Unplated] And Pad J1-A13(232.715mm,27.475mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A16(232.715mm,31.285mm) on TopLayer [Unplated] And Pad J1-A17(232.715mm,32.555mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A20(232.715mm,36.365mm) on TopLayer [Unplated] And Pad J1-A21(232.715mm,37.635mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A24(232.715mm,41.445mm) on TopLayer [Unplated] And Pad J1-A25(232.715mm,42.715mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A28(232.715mm,46.525mm) on TopLayer [Unplated] And Pad J1-A29(232.715mm,47.795mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A32(232.715mm,51.605mm) on TopLayer [Unplated] And Pad J1-A33(232.715mm,52.875mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A4(232.715mm,16.045mm) on TopLayer [Unplated] And Pad J1-A5(232.715mm,17.315mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A8(232.715mm,21.125mm) on TopLayer [Unplated] And Pad J1-A9(232.715mm,22.395mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B18(231.445mm,33.825mm) on TopLayer [Unplated] And Pad J1-B19(231.445mm,35.095mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B2(231.445mm,13.505mm) on TopLayer [Unplated] And Pad J1-B3(231.445mm,14.775mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B22(231.445mm,38.905mm) on TopLayer [Unplated] And Pad J1-B23(231.445mm,40.175mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B26(231.445mm,43.985mm) on TopLayer [Unplated] And Pad J1-B27(231.445mm,45.255mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B30(231.445mm,49.065mm) on TopLayer [Unplated] And Pad J1-B31(231.445mm,50.335mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B34(231.445mm,54.145mm) on TopLayer [Unplated] And Pad J1-B35(231.445mm,55.415mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B38(231.445mm,59.225mm) on TopLayer [Unplated] And Pad J1-B39(231.445mm,60.495mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-C32(230.175mm,51.605mm) on TopLayer [Unplated] And Pad J1-C33(230.175mm,52.875mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-C4(230.175mm,16.045mm) on TopLayer [Unplated] And Pad J1-C5(230.175mm,17.315mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-E4(227.635mm,16.045mm) on TopLayer [Unplated] And Pad J1-E5(227.635mm,17.315mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-F2(226.365mm,13.505mm) on TopLayer [Unplated] And Pad J1-F3(226.365mm,14.775mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-G4(225.095mm,16.045mm) on TopLayer [Unplated] And Pad J1-G5(225.095mm,17.315mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net VCC_VIO_B_fmc_reserve Between Pad J1-K40(221.285mm,61.765mm) on TopLayer [Unplated] And Pad J1-J39(222.555mm,60.495mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-J4(222.555mm,16.045mm) on TopLayer [Unplated] And Pad J1-J5(222.555mm,17.315mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-K2(221.285mm,13.505mm) on TopLayer [Unplated] And Pad J1-K3(221.285mm,14.775mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net VCC_ADJ_fmc_main Between Pad J2-F40(334.365mm,61.765mm) on TopLayer [Unplated] And Pad J2-E39(335.635mm,60.495mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net VCC_ADJ_fmc_main Between Pad J2-G39(333.095mm,60.495mm) on TopLayer [Unplated] And Pad J2-E39(335.635mm,60.495mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net VCC_ADJ_fmc_main Between Pad J2-H40(331.825mm,61.765mm) on TopLayer [Unplated] And Pad J2-F40(334.365mm,61.765mm) on TopLayer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net VCC_VIO_B_fmc_main Between Pad J2-K40(329.285mm,61.765mm) on TopLayer [Unplated] And Pad J2-J39(330.555mm,60.495mm) on TopLayer [Unplated] 
 Rule Violations :27
 
 Processing Rule : Width Constraint (Min=0.1mm) (Max=2mm) (Preferred=0.2mm) (All)
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=0.1mm) (Max=1mm) (Preferred=0.1mm) (WithinRoom('FPGA room'))
+Processing Rule : Width Constraint (Min=0.2mm) (Max=1mm) (Preferred=0.2mm) (WithinRoom('FPGA room'))
 Rule Violations :0
 
-Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.2mm) (Conductor Width=0.15mm) (Air Gap=0.2mm) (Entries=4) (All)
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.15mm) (Conductor Width=0.15mm) (Air Gap=0.15mm) (Entries=4) (WithinRoom('FPGA room'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.2mm) (Conductor Width=0.15mm) (Air Gap=0.15mm) (Entries=4) (All)
 Rule Violations :0
 
 Processing Rule : Minimum Annular Ring (Minimum=0.15mm) (All)
@@ -69,48 +72,48 @@ Processing Rule : Minimum Annular Ring (Minimum=0.1mm) (All)
 Rule Violations :0
 
 Processing Rule : Length Constraint (Min=0mm) (Max=2540mm) (All)
-   Violation between Length Constraint: (0mm < 0mm) xSignal(DAC_CLK_dds_channel_1_N-CLK0_N_PP1) Actual xSignal Length = 0mm
-   Violation between Length Constraint: (0mm < 0mm) xSignal(DAC_CLK_dds_channel_1_P-CLK0_P_PP1) Actual xSignal Length = 0mm
+   Violation between Length Constraint: (0mm < 0mm) xSignal(NetC3_1-REFA_P_PP1) Actual xSignal Length = 0mm
+   Violation between Length Constraint: (0mm < 0mm) xSignal(NetC4_2-REFA_N_PP2) Actual xSignal Length = 0mm
 Rule Violations :2
 
-Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C5,C6_MatchLengthsClass'))
+Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U34_U1_MatchLengthsClass'))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_MatchLengthsClass_1'))
 Rule Violations :0
 
-Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C5,C6_MatchLengthsClass_1'))
+Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C5,C6_MatchLengthsClass'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_MatchLengthsClass'))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=0.5mm) (InNetClass('DDS_out_channels'))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=0.5mm) (All)
-   Violation between Matched Net Lengths: Between xSignal(NetC5_1-NetR17_1_PP1) And xSignal(NetC6_2-NetR15_1_PP1) Actual Difference against NetC5_1-NetR17_1_PP1 is: 3.503mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between xSignal(NetC5_1-NetR17_1_PP1) And xSignal(NetC6_2-NetR15_1_PP1) Actual Difference against NetC5_1-NetR17_1_PP1 is: 1.671mm, Tolerance : 0.5mm. 
 Rule Violations :1
 
-Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C3,C4,C5,C6_MatchLengthsClass'))
+Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C5,C6_MatchLengthsClass_1'))
 Rule Violations :0
 
-Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_C3,C4,C5,C6_MatchLengthsClass'))
+Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C3,C4,C5,C6_MatchLengthsClass'))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=0.2mm) (InxSignalClass('xSignals_U1_Passives_MatchLengthsClass'))
 Rule Violations :0
 
-Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U34_U1_MatchLengthsClass'))
+Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_C3,C4,C5,C6_MatchLengthsClass'))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_C5,C6_MatchLengthsClass'))
 Rule Violations :0
 
-Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_MatchLengthsClass'))
+Processing Rule : Matched Lengths(Tolerance=0.5mm) (InxSignalClass('xSignals_U1_J1,J2_MatchLengthsClass'))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_C3,C4_MatchLengthsClass'))
-Rule Violations :0
-
-Processing Rule : Matched Lengths(Tolerance=0.5mm) (InxSignalClass('xSignals_U1_J1,J2_MatchLengthsClass'))
 Rule Violations :0
 
 
