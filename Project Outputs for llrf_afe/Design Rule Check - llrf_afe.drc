@@ -1,57 +1,103 @@
 Protel Design System Design Rule Check
 PCB File : D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc
-Date     : 17.08.2021
-Time     : 15:27:47
+Date     : 24.08.2021
+Time     : 15:38:07
 
-ERROR : More than 30 violations detected, DRC was stopped
+ERROR : More than 100 violations detected, DRC was stopped
 
 WARNING: Unplated multi-layer pad(s) detected
-   Pad Free-CASE(7.329mm,-4.486mm) on MultiLayer on Net CASE
-   Pad Free-CASE(6.154mm,80.114mm) on MultiLayer on Net CASE
-   Pad Free-CASE(234.874mm,1.964mm) on MultiLayer on Net CASE
-   Pad Free-CASE(234.874mm,91.494mm) on MultiLayer on Net CASE
-
-Processing Rule : Clearance Constraint (Gap=0.15mm) (All),(All)
-Rule Violations :0
+   Pad Free-CASE(7.5mm,9.35mm) on MultiLayer on Net CASE
+   Pad Free-CASE(7.5mm,94.75mm) on MultiLayer on Net CASE
+   Pad Free-CASE(236.22mm,16.6mm) on MultiLayer on Net CASE
+   Pad Free-CASE(236.22mm,106.13mm) on MultiLayer on Net CASE
 
 Processing Rule : Clearance Constraint (Gap=0.15mm) (IsCopperRegion),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.15mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=0.1mm) (WithinRoom('FPGA room')),(All)
 Rule Violations :0
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
-Rule Violations :0
+   Violation between Short-Circuit Constraint: Between Pad G1-3(122.7mm,87mm) on TopLayer And Track (122.7mm,87mm)(126.7mm,87mm) on TopLayer Location : [X = 224.074mm][Y = 187mm]
+   Violation between Short-Circuit Constraint: Between Pad G1-4(122.7mm,85mm) on TopLayer And Track (122.7mm,85mm)(122.7mm,85mm) on TopLayer Location : [X = 222.7mm][Y = 185mm]
+   Violation between Short-Circuit Constraint: Between Pad G1-4(122.7mm,85mm) on TopLayer And Track (122.7mm,85mm)(126.7mm,85mm) on TopLayer Location : [X = 224.074mm][Y = 185mm]
+   Violation between Short-Circuit Constraint: Between Pad G1-8(113.2mm,85mm) on TopLayer And Track (109.5mm,85mm)(113.2mm,85mm) on TopLayer Location : [X = 211.826mm][Y = 185mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-19(186.179mm,59.661mm) on TopLayer And Track (184.801mm,59.661mm)(186.179mm,59.661mm) on TopLayer Location : [X = 285.991mm][Y = 159.661mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-20(186.179mm,59.161mm) on TopLayer And Track (184.796mm,59.161mm)(186.179mm,59.161mm) on TopLayer Location : [X = 285.991mm][Y = 159.161mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-25(186.904mm,56.436mm) on TopLayer And Track (186.567mm,55.749mm)(186.888mm,56.07mm) on TopLayer Location : [X = 286.883mm][Y = 156.065mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-25(186.904mm,56.436mm) on TopLayer And Track (186.888mm,56.07mm)(186.888mm,56.42mm) on TopLayer Location : [X = 286.888mm][Y = 156.245mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-25(186.904mm,56.436mm) on TopLayer And Track (186.888mm,56.42mm)(186.904mm,56.436mm) on TopLayer Location : [X = 286.896mm][Y = 156.428mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-43(193.129mm,60.161mm) on TopLayer And Track (193.129mm,60.161mm)(193.13mm,60.16mm) on TopLayer Location : [X = 293.13mm][Y = 160.161mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-43(193.129mm,60.161mm) on TopLayer And Track (193.13mm,60.16mm)(194.563mm,60.16mm) on TopLayer Location : [X = 293.318mm][Y = 160.16mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-44(193.129mm,60.661mm) on TopLayer And Track (193.129mm,60.661mm)(193.132mm,60.664mm) on TopLayer Location : [X = 293.13mm][Y = 160.662mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-44(193.129mm,60.661mm) on TopLayer And Track (193.132mm,60.664mm)(194.109mm,60.664mm) on TopLayer Location : [X = 293.318mm][Y = 160.664mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-46(193.129mm,61.661mm) on TopLayer And Track (193.129mm,61.661mm)(193.135mm,61.667mm) on TopLayer Location : [X = 293.132mm][Y = 161.664mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-46(193.129mm,61.661mm) on TopLayer And Track (193.135mm,61.667mm)(194.067mm,61.667mm) on TopLayer Location : [X = 293.32mm][Y = 161.667mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-8(188.904mm,63.386mm) on TopLayer And Track (188.899mm,63.391mm)(188.899mm,64.437mm) on TopLayer Location : [X = 288.899mm][Y = 163.577mm]
+   Violation between Short-Circuit Constraint: Between Pad U1-8(188.904mm,63.386mm) on TopLayer And Track (188.899mm,63.391mm)(188.904mm,63.386mm) on TopLayer Location : [X = 288.901mm][Y = 163.389mm]
+   Violation between Short-Circuit Constraint: Between Pad U33-2(204.246mm,24.811mm) on TopLayer And Track (204.246mm,24.811mm)(205.096mm,24.811mm) on TopLayer Location : [X = 304.46mm][Y = 124.811mm]
+   Violation between Short-Circuit Constraint: Between Pad U33-6(201.546mm,25.311mm) on TopLayer And Track (200.696mm,25.311mm)(201.546mm,25.311mm) on TopLayer Location : [X = 301.333mm][Y = 125.311mm]
+   Violation between Short-Circuit Constraint: Between Pad U34-23(130.55mm,21.95mm) on TopLayer And Track (130.55mm,21.95mm)(131.596mm,21.95mm) on TopLayer Location : [X = 230.75mm][Y = 121.95mm]
+   Violation between Short-Circuit Constraint: Between Pad U34-24(130.55mm,22.45mm) on TopLayer And Track (130.55mm,22.45mm)(130.56mm,22.46mm) on TopLayer Location : [X = 230.555mm][Y = 122.455mm]
+   Violation between Short-Circuit Constraint: Between Pad U34-24(130.55mm,22.45mm) on TopLayer And Track (130.56mm,22.46mm)(131.13mm,22.46mm) on TopLayer Location : [X = 230.755mm][Y = 122.46mm]
+   Violation between Short-Circuit Constraint: Between Pad U34-24(130.55mm,22.45mm) on TopLayer And Track (131.13mm,22.46mm)(131.211mm,22.54mm) on TopLayer Location : [X = 231.04mm][Y = 122.456mm]
+   Violation between Short-Circuit Constraint: Between Pad U34-26(130.55mm,23.45mm) on TopLayer And Track (129.57mm,23.447mm)(130.547mm,23.447mm) on TopLayer Location : [X = 230.348mm][Y = 123.447mm]
+   Violation between Short-Circuit Constraint: Between Pad U34-26(130.55mm,23.45mm) on TopLayer And Track (130.547mm,23.447mm)(130.55mm,23.45mm) on TopLayer Location : [X = 230.548mm][Y = 123.449mm]
+   Violation between Short-Circuit Constraint: Between Pad U34-30(130.55mm,25.45mm) on TopLayer And Track (130.55mm,25.45mm)(131.44mm,25.45mm) on TopLayer Location : [X = 230.75mm][Y = 125.45mm]
+   Violation between Short-Circuit Constraint: Between Pad U34-45(125.8mm,29.2mm) on TopLayer And Track (125.8mm,29.2mm)(125.8mm,30.1mm) on TopLayer Location : [X = 225.8mm][Y = 129.401mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-23(130.55mm,53.95mm) on TopLayer And Track (130.55mm,53.95mm)(130.56mm,53.96mm) on TopLayer Location : [X = 230.555mm][Y = 153.955mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-23(130.55mm,53.95mm) on TopLayer And Track (130.55mm,53.95mm)(130.56mm,53.96mm) on TopLayer Location : [X = 230.555mm][Y = 153.955mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-23(130.55mm,53.95mm) on TopLayer And Track (130.56mm,53.96mm)(130.97mm,53.96mm) on TopLayer Location : [X = 230.755mm][Y = 153.96mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-23(130.55mm,53.95mm) on TopLayer And Track (130.56mm,53.96mm)(130.97mm,53.96mm) on TopLayer Location : [X = 230.755mm][Y = 153.96mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-23(130.55mm,53.95mm) on TopLayer And Track (130.976mm,53.966mm)(131.666mm,53.966mm) on TopLayer Location : [X = 230.963mm][Y = 153.966mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-23(130.55mm,53.95mm) on TopLayer And Track (130.97mm,53.96mm)(130.976mm,53.966mm) on TopLayer Location : [X = 230.96mm][Y = 153.963mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-23(130.55mm,53.95mm) on TopLayer And Track (130.97mm,53.96mm)(130.981mm,53.971mm) on TopLayer Location : [X = 230.96mm][Y = 153.964mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-23(130.55mm,53.95mm) on TopLayer And Track (130.981mm,53.971mm)(131.571mm,53.971mm) on TopLayer Location : [X = 230.966mm][Y = 153.97mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-24(130.55mm,54.45mm) on TopLayer And Track (130.55mm,54.45mm)(130.56mm,54.46mm) on TopLayer Location : [X = 230.555mm][Y = 154.455mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-24(130.55mm,54.45mm) on TopLayer And Track (130.55mm,54.45mm)(130.56mm,54.46mm) on TopLayer Location : [X = 230.555mm][Y = 154.455mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-24(130.55mm,54.45mm) on TopLayer And Track (130.56mm,54.46mm)(131.13mm,54.46mm) on TopLayer Location : [X = 230.755mm][Y = 154.46mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-24(130.55mm,54.45mm) on TopLayer And Track (131.13mm,54.46mm)(131.211mm,54.54mm) on TopLayer Location : [X = 231.04mm][Y = 154.456mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-26(130.55mm,55.45mm) on TopLayer And Track (129.57mm,55.447mm)(130.547mm,55.447mm) on TopLayer Location : [X = 230.348mm][Y = 155.447mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-26(130.55mm,55.45mm) on TopLayer And Track (129.57mm,55.447mm)(130.547mm,55.447mm) on TopLayer Location : [X = 230.348mm][Y = 155.447mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-26(130.55mm,55.45mm) on TopLayer And Track (130.547mm,55.447mm)(130.55mm,55.45mm) on TopLayer Location : [X = 230.548mm][Y = 155.449mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-26(130.55mm,55.45mm) on TopLayer And Track (130.547mm,55.447mm)(130.55mm,55.45mm) on TopLayer Location : [X = 230.548mm][Y = 155.449mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-30(130.55mm,57.45mm) on TopLayer And Track (130.55mm,57.45mm)(131.44mm,57.45mm) on TopLayer Location : [X = 230.75mm][Y = 157.45mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-30(130.55mm,57.45mm) on TopLayer And Track (130.55mm,57.45mm)(131.44mm,57.45mm) on TopLayer Location : [X = 230.75mm][Y = 157.45mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-45(125.8mm,61.2mm) on TopLayer And Track (125.8mm,61.2mm)(125.8mm,62.1mm) on TopLayer Location : [X = 225.8mm][Y = 161.401mm]
+   Violation between Short-Circuit Constraint: Between Pad U41-45(125.8mm,61.2mm) on TopLayer And Track (125.8mm,61.2mm)(125.8mm,62.1mm) on TopLayer Location : [X = 225.8mm][Y = 161.401mm]
+Rule Violations :47
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A12(232.715mm,26.205mm) on TopLayer [Unplated] And Pad J1-A13(232.715mm,27.475mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A16(232.715mm,31.285mm) on TopLayer [Unplated] And Pad J1-A17(232.715mm,32.555mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A20(232.715mm,36.365mm) on TopLayer [Unplated] And Pad J1-A21(232.715mm,37.635mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A24(232.715mm,41.445mm) on TopLayer [Unplated] And Pad J1-A25(232.715mm,42.715mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A28(232.715mm,46.525mm) on TopLayer [Unplated] And Pad J1-A29(232.715mm,47.795mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A32(232.715mm,51.605mm) on TopLayer [Unplated] And Pad J1-A33(232.715mm,52.875mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A4(232.715mm,16.045mm) on TopLayer [Unplated] And Pad J1-A5(232.715mm,17.315mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-A8(232.715mm,21.125mm) on TopLayer [Unplated] And Pad J1-A9(232.715mm,22.395mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B18(231.445mm,33.825mm) on TopLayer [Unplated] And Pad J1-B19(231.445mm,35.095mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B2(231.445mm,13.505mm) on TopLayer [Unplated] And Pad J1-B3(231.445mm,14.775mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B22(231.445mm,38.905mm) on TopLayer [Unplated] And Pad J1-B23(231.445mm,40.175mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B26(231.445mm,43.985mm) on TopLayer [Unplated] And Pad J1-B27(231.445mm,45.255mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B30(231.445mm,49.065mm) on TopLayer [Unplated] And Pad J1-B31(231.445mm,50.335mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B34(231.445mm,54.145mm) on TopLayer [Unplated] And Pad J1-B35(231.445mm,55.415mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-B38(231.445mm,59.225mm) on TopLayer [Unplated] And Pad J1-B39(231.445mm,60.495mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-C32(230.175mm,51.605mm) on TopLayer [Unplated] And Pad J1-C33(230.175mm,52.875mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-C4(230.175mm,16.045mm) on TopLayer [Unplated] And Pad J1-C5(230.175mm,17.315mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-E4(227.635mm,16.045mm) on TopLayer [Unplated] And Pad J1-E5(227.635mm,17.315mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-F2(226.365mm,13.505mm) on TopLayer [Unplated] And Pad J1-F3(226.365mm,14.775mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-G4(225.095mm,16.045mm) on TopLayer [Unplated] And Pad J1-G5(225.095mm,17.315mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_VIO_B_fmc_reserve Between Pad J1-K40(221.285mm,61.765mm) on TopLayer [Unplated] And Pad J1-J39(222.555mm,60.495mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-J4(222.555mm,16.045mm) on TopLayer [Unplated] And Pad J1-J5(222.555mm,17.315mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND_fmc_reserve Between Pad J1-K2(221.285mm,13.505mm) on TopLayer [Unplated] And Pad J1-K3(221.285mm,14.775mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_ADJ_fmc_main Between Pad J2-F40(334.365mm,61.765mm) on TopLayer [Unplated] And Pad J2-E39(335.635mm,60.495mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_ADJ_fmc_main Between Pad J2-G39(333.095mm,60.495mm) on TopLayer [Unplated] And Pad J2-E39(335.635mm,60.495mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_ADJ_fmc_main Between Pad J2-H40(331.825mm,61.765mm) on TopLayer [Unplated] And Pad J2-F40(334.365mm,61.765mm) on TopLayer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net VCC_VIO_B_fmc_main Between Pad J2-K40(329.285mm,61.765mm) on TopLayer [Unplated] And Pad J2-J39(330.555mm,60.495mm) on TopLayer [Unplated] 
-Rule Violations :27
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C25-2(189.702mm,49.143mm) on Bottom Layer And Pad C25-2(190.202mm,49.143mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C69-2(157.503mm,42.914mm) on Bottom Layer And Pad C69-2(158.003mm,42.914mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C71-2(155.896mm,33.419mm) on Bottom Layer And Via (156.146mm,32.211mm) from TopLayer to Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net AGND_MFM Between Pad U4-6(25.75mm,97.8mm) on TopLayer And Pad U4-7(26.4mm,97.8mm) on TopLayer 
+Rule Violations :26
 
 Processing Rule : Width Constraint (Min=0.1mm) (Max=2mm) (Preferred=0.2mm) (All)
 Rule Violations :0
@@ -65,10 +111,10 @@ Rule Violations :0
 Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.2mm) (Conductor Width=0.15mm) (Air Gap=0.15mm) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Minimum Annular Ring (Minimum=0.15mm) (All)
+Processing Rule : Minimum Annular Ring (Minimum=0.1mm) (All)
 Rule Violations :0
 
-Processing Rule : Minimum Annular Ring (Minimum=0.1mm) (All)
+Processing Rule : Minimum Annular Ring (Minimum=0.15mm) (All)
 Rule Violations :0
 
 Processing Rule : Length Constraint (Min=0mm) (Max=2540mm) (All)
@@ -89,11 +135,35 @@ Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=0.5mm) (InNetClass('DDS_out_channels'))
-Rule Violations :0
+   Violation between Matched Net Lengths: Between Net DDS_OUT+_1 And Net DDS_OUT+_2 Length:28.182mm is not within 0.5mm tolerance of Length:29.739mm (1.057mm short) 
+   Violation between Matched Net Lengths: Between Net DDS_OUT+_1 And Net DDS_OUT+_3 Length:28.182mm is not within 0.5mm tolerance of Length:29.739mm (1.057mm short) 
+   Violation between Matched Net Lengths: Between Net DDS_OUT+_1 And Net DDS_OUT+_4 Length:28.442mm is not within 0.5mm tolerance of Length:29.739mm (0.797mm short) 
+Rule Violations :3
 
 Processing Rule : Matched Lengths(Tolerance=0.5mm) (All)
-   Violation between Matched Net Lengths: Between xSignal(NetC5_1-NetR17_1_PP1) And xSignal(NetC6_2-NetR15_1_PP1) Actual Difference against NetC5_1-NetR17_1_PP1 is: 1.671mm, Tolerance : 0.5mm. 
-Rule Violations :1
+   Violation between Matched Net Lengths: Between Net 100MHz_CLK_IN_N And Net 100MHz_CLK_IN_P Actual Difference against 100MHz_CLK_IN_P is: 0.621mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net CLK1_N And Net CLK1_P Actual Difference against CLK1_P is: 1.039mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net CLK3_N And Net CLK3_P Actual Difference against CLK3_P is: 0.501mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net DAC_OUT_dds_filter_22_N And Net DAC_OUT_dds_filter_22_P Actual Difference against DAC_OUT_dds_filter_22_P is: 3.522mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net I_USB_N And Net I_USB_P Actual Difference against I_USB_P is: 1.39mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net RESERVE_LVDS_0_N And Net RESERVE_LVDS_0_P Actual Difference against RESERVE_LVDS_0_P is: 3.925mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net RESERVE_LVDS_1_N And Net RESERVE_LVDS_1_P Actual Difference against RESERVE_LVDS_1_P is: 3.019mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net RESERVE_LVDS_2_N And Net RESERVE_LVDS_2_P Actual Difference against RESERVE_LVDS_2_P is: 4.653mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net RESERVE_LVDS_3_N And Net RESERVE_LVDS_3_P Actual Difference against RESERVE_LVDS_3_P is: 4.382mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_C\S\_N And Net SYS_C\S\_P Actual Difference against SYS_C\S\_P is: 1.414mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_DDS_SYNC_N And Net SYS_DDS_SYNC_P Actual Difference against SYS_DDS_SYNC_P is: 0.54mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MISO_0_N And Net SYS_MISO_0_P Actual Difference against SYS_MISO_0_P is: 1.166mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MISO_1_N And Net SYS_MISO_1_P Actual Difference against SYS_MISO_1_P is: 2.408mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MISO_2_N And Net SYS_MISO_2_P Actual Difference against SYS_MISO_2_P is: 2.571mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MISO_3_N And Net SYS_MISO_3_P Actual Difference against SYS_MISO_3_P is: 2.008mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MOSI_0_N And Net SYS_MOSI_0_P Actual Difference against SYS_MOSI_0_P is: 0.693mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MOSI_1_N And Net SYS_MOSI_1_P Actual Difference against SYS_MOSI_1_P is: 0.834mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MOSI_2_N And Net SYS_MOSI_2_P Actual Difference against SYS_MOSI_2_P is: 1.442mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MOSI_3_N And Net SYS_MOSI_3_P Actual Difference against SYS_MOSI_3_P is: 1.381mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_SCLK_N And Net SYS_SCLK_P Actual Difference against SYS_SCLK_P is: 1.42mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between xSignal(DAC_CLK_dds_channel_1_N-CLK0_N_PP1) And xSignal(DAC_CLK_dds_channel_1_P-CLK0_P_PP1) Actual Difference against DAC_CLK_dds_channel_1_P-CLK0_P_PP1 is: 2.105mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between xSignal(NetC5_1-NetR17_1_PP1) And xSignal(NetC6_2-NetR15_1_PP1) Actual Difference against NetC5_1-NetR17_1_PP1 is: 0.589mm, Tolerance : 0.5mm. 
+Rule Violations :22
 
 Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C5,C6_MatchLengthsClass_1'))
 Rule Violations :0
@@ -117,6 +187,6 @@ Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1
 Rule Violations :0
 
 
-Violations Detected : 30
+Violations Detected : 100
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:04
