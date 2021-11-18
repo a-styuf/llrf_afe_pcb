@@ -636,19 +636,87 @@ GenerateClassCluster=0
 DocumentUniqueId=YHMSZHHV
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for llrf_afe\BGA Escape Route - llrf_afe.html
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for llrf_afe\Design Rule Check - llrf_afe.html
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for llrf_afe\BOM\llrf_afe.xlsx
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.G1
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for llrf_afe\Move Component(s) Origin To Grid - llrf_afe.html
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.G2
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.G3
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.G4
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.G5
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.REP
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for llrf_afe\BOM\llrf_afe.xlsx
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro8BCE.xls
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro3754.xls
 DItemRevisionGUID=
 
 [Parameter1]
@@ -669,7 +737,7 @@ Value=
 
 [Parameter5]
 Name=GlobalProjectRevision
-Value=v0.27
+Value=v1.00
 
 [Parameter6]
 Name=Разработал

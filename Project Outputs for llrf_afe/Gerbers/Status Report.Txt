@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [llrf_afe.PcbDoc]
+   Generated File[llrf_afe.TXT]
+   Generated File[llrf_afe.LDP]
+   Generated File[llrf_afe.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 12:44:00 On 18.11.2021
