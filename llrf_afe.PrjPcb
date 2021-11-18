@@ -680,68 +680,80 @@ DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GP1
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GM10
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTL
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GP1
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTO
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTS
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.LDP
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.REP
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.TXT
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.REP
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for llrf_afe\BOM\llrf_afe.xlsx
+DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro8BCE.xls
+DocumentPath=Project Outputs for llrf_afe\BOM\llrf_afe.xlsx
 DItemRevisionGUID=
 
 [GeneratedDocument21]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro8BCE.xls
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro802A.xls
+DItemRevisionGUID=
+
+[GeneratedDocument23]
 DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro3754.xls
 DItemRevisionGUID=
 
+[GeneratedDocument24]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro9890.xls
+DItemRevisionGUID=
+
 [Parameter1]
-Name=GlobalOrganizationName
-Value=CosyLab Siberia
+Name=Разработал
+Value=Styuf Alexey
 
 [Parameter2]
-Name=GlobalProjectName1
-Value=LLRF-AFE
+Name=GlobalProjectRevision
+Value=v0.53
 
 [Parameter3]
-Name=GlobalProjectName2
-Value=Analog Front End
-
-[Parameter4]
 Name=GlobalProjectName3
 Value=
 
+[Parameter4]
+Name=GlobalProjectName2
+Value=Analog Front End
+
 [Parameter5]
-Name=GlobalProjectRevision
-Value=v1.00
+Name=GlobalProjectName1
+Value=LLRF-AFE
 
 [Parameter6]
-Name=Разработал
-Value=Styuf Alexey
+Name=GlobalOrganizationName
+Value=CosyLab Siberia
 
 [Configuration1]
 Name=Sources
