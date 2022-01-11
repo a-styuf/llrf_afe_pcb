@@ -1,14 +1,10 @@
-Project Outputs Generation Report
----------------------------------
-Start Output Generation At 14:25:03 On 18.11.2021
-
-Output: BOM
-Type  : BOM
-From  : Variant [[No Variations]] of Project [llrf_afe.PrjPcb]
-   Generated File[llrf_afe.xlsx]
+Output: AutoCAD dwg/dxf File PCB
+Type  : AutoCAD PCB
+From  : PCB Document [llrf_afe.PcbDoc]
+   Generated File[llrf_afe.DWG]
 
 
 Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 14:25:06 On 18.11.2021
+Finished Output Generation At 16:05:39 On 10.01.2022
