@@ -1,0 +1,719 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD21\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">03.02.2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">18:17:43</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:04</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc" class="file"><acronym title="D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc">D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">4</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">101</td></tr>
+</table>
+</td>
+</table><a name="IDHVWMLREW0ZR4CKJHUO2RVYX3VELQKXPCSWZS3QDR5REFU3AP23BI"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNLP2KUGDF23M4KJKMMKLMTNZPLEZWQOLXDO4LDVLQUU0KBA0RZO">Unplated multi-layer pad(s) detected</a></td>
+<td class="column2">4</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">4</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2YUZFD2WDL1KCAFSBOGZKW2EPBVEEVOPWQF5LOHGPGQ50BJTQ4MI">Clearance Constraint (Gap=0.1mm) (WithinRoom('FPGA room')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWXAIBQZ41GU2ENKZIQ4NQXHWABHCFT1VMZIEK5O4PFPH2Z3W5DFI">Clearance Constraint (Gap=0.15mm) (IsCopperRegion),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID31XNDBXDIXS1OTZEIILYKHNRKF5SN45V2TS0KBHTO1QLYOKXEK4O">Clearance Constraint (Gap=0.15mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWJAU3UWDBULJFYCSZQNNQU4UXMCGRK3HPZJ2IBBLXYU0V4UJAOQH">Clearance Constraint (Gap=0.25mm) (OnLayer('GroundPlane')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4VGB10YHRGSWPZJRRNS04X50AKIE1ABGEGFCUZHGDK5SZOIOVGTG">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">48</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTXKAMZUE510IPHC43AN1BLLCEN4DXDAYUERF5CECT3KXFWQKQFHB">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">28</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRFHAGCMFLAT4BYWIDE1QQKDPIGZ2XM2LKQ5LIHLA4HXTF3FSXP2K">Width Constraint (Min=0.1mm) (Max=1mm) (Preferred=0.1mm) (WithinRoom('FPGA room'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEB52ZGIFEZWMMQWMFKMGT5I34NLN2A1PBJEMZ0YUJKDD2HIAXOF">Width Constraint (Min=0.1mm) (Max=2mm) (Preferred=0.2mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUMKCFSADXZC0ONA4B53A0JSCIPB4L32JJ0Y1ULOKYOU4AOEFMJOB">Power Plane Connect Rule(Relief Connect )(Expansion=0.15mm) (Conductor Width=0.15mm) (Air Gap=0.15mm) (Entries=4) (WithinRoom('FPGA room'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUGSITOBN4A1UMLOC2EFWOK1AEHAMGNECAUM2DYBQR3UXKWY0VUXL">Power Plane Connect Rule(Relief Connect )(Expansion=0.2mm) (Conductor Width=0.15mm) (Air Gap=0.15mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDF0J42QJZGN1KLLEXDC4XAGPB1LYLPWICQ2FVU2CBIUVX12TAHXQD">Minimum Annular Ring (Minimum=0.1mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHS3TCYN4CCVIN2UDZF1NHYNUNMHA5ZJZUZAU2SBBDNAPIHNS2OFP">Minimum Annular Ring (Minimum=0.15mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1301LNB2PTV5OEHMAT2HQB2IIE2AOAVF3RNXFQHQAU5YNQYV1RCM">Length Constraint (Min=0mm) (Max=2540mm) (All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVOOFA3K0YSHAJXOJ14SSYBCYPRWTAPQWQUXOJWD0UOXQO0MJEO">Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U34_U1_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUGEEXM04K30ABMTUIKY1FKELNEMB3WCFTZWSEWNFZI0HJRXU1PDD">Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_MatchLengthsClass_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMXC11BQUK1PUOQVM4CNISWV0NEAIEDK5ILV3RZGRZ0LY3G3T5IAB">Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C5,C6_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCUNIMSAHHS0KDI5MRZ5ASHGQ4FR4LKSA1GZ21QBY1NMKQPPHSUCE">Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEF2TEVTBPHKXPQYOCGCLQCU3BB2IHNFPCIXXT3J3VXLRVFI2MDJI">Matched Lengths(Tolerance=0.5mm) (InNetClass('DDS_out_channels'))</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNGYGJ0EYJ3YMGVBXSBOB5Z0ULO5EGEZZZUH3XWEOYN3T2TWRZAGB">Matched Lengths(Tolerance=0.5mm) (All)</a></td>
+<td class="column2">18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZI52UMZ3D42XCSHWREPYIPYXOIZDQUEIP0CCIKLWOGPWJRSBPHGL">Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C5,C6_MatchLengthsClass_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3OBU33CPYG5FIHREGJEPLOIEPCUQI2WOVEDMHB5EEPFELKQ4KK">Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C3,C4,C5,C6_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIO00L4Z0ZKBIELNPOL5AU0PENFPFWSYZTPK2JSMNWTCUPEER000D">Matched Lengths(Tolerance=0.2mm) (InxSignalClass('xSignals_U1_Passives_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUGZ3HQ11B5S4LGK5MVIIQOVKJNRJCH4CVIZIQBNZOLGPTFNZYJPH">Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_C3,C4,C5,C6_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTHRZH52BWSNFBAYWI20MX535JBGHZLMBFD0CQHBPGUWVW1LSB1PE">Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_C5,C6_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKVJ1OO33UVIBJ0LLH31FKSMJKIIKX4FO10KGBYC35M22PTELPVDE">Matched Lengths(Tolerance=0.5mm) (InxSignalClass('xSignals_U1_J1,J2_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDF4IUH20VBJ55PUPNW1CUUYYJDKURZLPVEB1MHCFOT55OBGECPEPD">Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_C3,C4_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">101</td>
+</tr>
+</table><br><a name="IDYPJJRR5WAG04NXPC5ZXABSOLDIJHSDVH0FUZAYCCDMG4XFMXCQED"><h2>Warnings</h2></a><a name="IDNLP2KUGDF23M4KJKMMKLMTNZPLEZWQOLXDO4LDVLQUU0KBA0RZO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Unplated multi-layer pad(s) detected</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4151.575mil|Location2.X=4312.993mil|Location1.Y=4224.409mil|Location2.Y=4385.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4151.575mil|Location2.X=4312.993mil|Location1.Y=4224.409mil|Location2.Y=4385.827mil|Absolute=True">Pad Free-CASE(7.5mm,9.35mm) on MultiLayer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Net CASE</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4151.575mil|Location2.X=4312.993mil|Location1.Y=7586.615mil|Location2.Y=7748.033mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4151.575mil|Location2.X=4312.993mil|Location1.Y=7586.615mil|Location2.Y=7748.033mil|Absolute=True">Pad Free-CASE(7.5mm,94.75mm) on MultiLayer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Net CASE</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13156.299mil|Location2.X=13317.717mil|Location1.Y=4509.843mil|Location2.Y=4671.261mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13156.299mil|Location2.X=13317.717mil|Location1.Y=4509.843mil|Location2.Y=4671.261mil|Absolute=True">Pad Free-CASE(236.22mm,16.6mm) on MultiLayer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Net CASE</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13156.299mil|Location2.X=13317.717mil|Location1.Y=8034.645mil|Location2.Y=8196.063mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13156.299mil|Location2.X=13317.717mil|Location1.Y=8034.645mil|Location2.Y=8196.063mil|Absolute=True">Pad Free-CASE(236.22mm,106.13mm) on MultiLayer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Net CASE</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID4VGB10YHRGSWPZJRRNS04X50AKIE1ABGEGFCUZHGDK5SZOIOVGTG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.173mil|Location2.X=8783.275mil|Location1.Y=7346.661mil|Location2.Y=7377.763mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8752.173mil|Location2.X=8783.275mil|Location1.Y=7346.661mil|Location2.Y=7377.763mil|Absolute=True">Short-Circuit Constraint: Between Pad G1-3(122.7mm,87mm) on TopLayer And Track (122.7mm,87mm)(122.7mm,87mm) on TopLayer Location : [X = 222.7mm][Y = 187mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8755.539mil|Location2.X=8888.091mil|Location1.Y=7295.928mil|Location2.Y=7428.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8755.539mil|Location2.X=8888.091mil|Location1.Y=7295.928mil|Location2.Y=7428.48mil|Absolute=True">Short-Circuit Constraint: Between Pad G1-3(122.7mm,87mm) on TopLayer And Track (122.7mm,87mm)(126.7mm,87mm) on TopLayer Location : [X = 224.074mm][Y = 187mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8760.54mil|Location2.X=8774.895mil|Location1.Y=7276.302mil|Location2.Y=7290.658mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8760.54mil|Location2.X=8774.895mil|Location1.Y=7276.302mil|Location2.Y=7290.658mil|Absolute=True">Short-Circuit Constraint: Between Pad G1-4(122.7mm,85mm) on TopLayer And Track (122.7mm,85mm)(122.7mm,85mm) on TopLayer Location : [X = 222.7mm][Y = 185mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8755.525mil|Location2.X=8888.091mil|Location1.Y=7217.197mil|Location2.Y=7349.763mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8755.525mil|Location2.X=8888.091mil|Location1.Y=7217.197mil|Location2.Y=7349.763mil|Absolute=True">Short-Circuit Constraint: Between Pad G1-4(122.7mm,85mm) on TopLayer And Track (122.7mm,85mm)(126.7mm,85mm) on TopLayer Location : [X = 224.074mm][Y = 185mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8273.325mil|Location2.X=8405.892mil|Location1.Y=7217.196mil|Location2.Y=7349.764mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8273.325mil|Location2.X=8405.892mil|Location1.Y=7217.196mil|Location2.Y=7349.764mil|Absolute=True">Short-Circuit Constraint: Between Pad G1-8(113.2mm,85mm) on TopLayer And Track (109.5mm,85mm)(113.2mm,85mm) on TopLayer Location : [X = 211.826mm][Y = 185mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11245.913mil|Location2.X=11273.096mil|Location1.Y=6272.281mil|Location2.Y=6299.463mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11245.913mil|Location2.X=11273.096mil|Location1.Y=6272.281mil|Location2.Y=6299.463mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-19(186.179mm,59.661mm) on TopLayer And Track (184.801mm,59.661mm)(186.179mm,59.661mm) on TopLayer Location : [X = 285.991mm][Y = 159.661mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11245.913mil|Location2.X=11273.096mil|Location1.Y=6252.597mil|Location2.Y=6279.779mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11245.913mil|Location2.X=11273.096mil|Location1.Y=6252.597mil|Location2.Y=6279.779mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-20(186.179mm,59.161mm) on TopLayer And Track (184.796mm,59.161mm)(186.179mm,59.161mm) on TopLayer Location : [X = 285.991mm][Y = 159.161mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11287.185mil|Location2.X=11302.048mil|Location1.Y=6136.87mil|Location2.Y=6151.733mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11287.185mil|Location2.X=11302.048mil|Location1.Y=6136.87mil|Location2.Y=6151.733mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-25(186.904mm,56.436mm) on TopLayer And Track (186.567mm,55.749mm)(186.888mm,56.07mm) on TopLayer Location : [X = 286.883mm][Y = 156.065mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11281.677mil|Location2.X=11307.915mil|Location1.Y=6138.252mil|Location2.Y=6164.489mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11281.677mil|Location2.X=11307.915mil|Location1.Y=6138.252mil|Location2.Y=6164.489mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-25(186.904mm,56.436mm) on TopLayer And Track (186.888mm,56.07mm)(186.888mm,56.42mm) on TopLayer Location : [X = 286.888mm][Y = 156.245mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11287.486mil|Location2.X=11302.75mil|Location1.Y=6150.95mil|Location2.Y=6166.214mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11287.486mil|Location2.X=11302.75mil|Location1.Y=6150.95mil|Location2.Y=6166.214mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-25(186.904mm,56.436mm) on TopLayer And Track (186.888mm,56.42mm)(186.904mm,56.436mm) on TopLayer Location : [X = 286.896mm][Y = 156.428mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11533.331mil|Location2.X=11547.757mil|Location1.Y=6298.319mil|Location2.Y=6312.745mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11533.331mil|Location2.X=11547.757mil|Location1.Y=6298.319mil|Location2.Y=6312.745mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-43(193.129mm,60.161mm) on TopLayer And Track (193.129mm,60.161mm)(193.13mm,60.16mm) on TopLayer Location : [X = 293.13mm][Y = 160.161mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11534.369mil|Location2.X=11561.502mil|Location1.Y=6291.939mil|Location2.Y=6319.073mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11534.369mil|Location2.X=11561.502mil|Location1.Y=6291.939mil|Location2.Y=6319.073mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-43(193.129mm,60.161mm) on TopLayer And Track (193.13mm,60.16mm)(194.563mm,60.16mm) on TopLayer Location : [X = 293.318mm][Y = 160.16mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11533.32mil|Location2.X=11547.818mil|Location1.Y=6318.044mil|Location2.Y=6332.542mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11533.32mil|Location2.X=11547.818mil|Location1.Y=6318.044mil|Location2.Y=6332.542mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-44(193.129mm,60.661mm) on TopLayer And Track (193.129mm,60.661mm)(193.132mm,60.664mm) on TopLayer Location : [X = 293.13mm][Y = 160.662mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11534.417mil|Location2.X=11561.504mil|Location1.Y=6311.801mil|Location2.Y=6338.887mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11534.417mil|Location2.X=11561.504mil|Location1.Y=6311.801mil|Location2.Y=6338.887mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-44(193.129mm,60.661mm) on TopLayer And Track (193.132mm,60.664mm)(194.109mm,60.664mm) on TopLayer Location : [X = 293.318mm][Y = 160.664mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11533.29mil|Location2.X=11547.994mil|Location1.Y=6357.384mil|Location2.Y=6372.088mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11533.29mil|Location2.X=11547.994mil|Location1.Y=6357.384mil|Location2.Y=6372.088mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-46(193.129mm,61.661mm) on TopLayer And Track (193.129mm,61.661mm)(193.135mm,61.667mm) on TopLayer Location : [X = 293.132mm][Y = 161.664mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11534.559mil|Location2.X=11561.508mil|Location1.Y=6351.386mil|Location2.Y=6378.334mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11534.559mil|Location2.X=11561.508mil|Location1.Y=6351.386mil|Location2.Y=6378.334mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-46(193.129mm,61.661mm) on TopLayer And Track (193.135mm,61.667mm)(194.067mm,61.667mm) on TopLayer Location : [X = 293.32mm][Y = 161.667mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11360.476mil|Location2.X=11387.46mil|Location1.Y=6426.53mil|Location2.Y=6453.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11360.476mil|Location2.X=11387.46mil|Location1.Y=6426.53mil|Location2.Y=6453.515mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-8(188.904mm,63.386mm) on TopLayer And Track (188.899mm,63.391mm)(188.899mm,64.437mm) on TopLayer Location : [X = 288.899mm][Y = 163.577mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11366.748mil|Location2.X=11381.4mil|Location1.Y=6425.305mil|Location2.Y=6439.957mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11366.748mil|Location2.X=11381.4mil|Location1.Y=6425.305mil|Location2.Y=6439.957mil|Absolute=True">Short-Circuit Constraint: Between Pad U1-8(188.904mm,63.386mm) on TopLayer And Track (188.899mm,63.391mm)(188.904mm,63.386mm) on TopLayer Location : [X = 288.901mm][Y = 163.389mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11974.497mil|Location2.X=11998.704mil|Location1.Y=4901.721mil|Location2.Y=4925.927mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11974.497mil|Location2.X=11998.704mil|Location1.Y=4901.721mil|Location2.Y=4925.927mil|Absolute=True">Short-Circuit Constraint: Between Pad U38-2(204.246mm,24.811mm) on TopLayer And Track (204.246mm,24.811mm)(205.096mm,24.811mm) on TopLayer Location : [X = 304.46mm][Y = 124.811mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11851.39mil|Location2.X=11875.597mil|Location1.Y=4921.407mil|Location2.Y=4945.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11851.39mil|Location2.X=11875.597mil|Location1.Y=4921.407mil|Location2.Y=4945.614mil|Absolute=True">Short-Circuit Constraint: Between Pad U38-6(201.546mm,25.311mm) on TopLayer And Track (200.696mm,25.311mm)(201.546mm,25.311mm) on TopLayer Location : [X = 301.333mm][Y = 125.311mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.599mil|Location2.X=9098.712mil|Location1.Y=4787.141mil|Location2.Y=4815.255mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.599mil|Location2.X=9098.712mil|Location1.Y=4787.141mil|Location2.Y=4815.255mil|Absolute=True">Short-Circuit Constraint: Between Pad U39-23(130.55mm,21.95mm) on TopLayer And Track (130.55mm,21.95mm)(131.596mm,21.95mm) on TopLayer Location : [X = 230.75mm][Y = 121.95mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.517mil|Location2.X=9084.403mil|Location1.Y=4813.627mil|Location2.Y=4828.513mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.517mil|Location2.X=9084.403mil|Location1.Y=4813.627mil|Location2.Y=4828.513mil|Absolute=True">Short-Circuit Constraint: Between Pad U39-24(130.55mm,22.45mm) on TopLayer And Track (130.55mm,22.45mm)(130.56mm,22.46mm) on TopLayer Location : [X = 230.555mm][Y = 122.455mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.965mil|Location2.X=9098.722mil|Location1.Y=4807.379mil|Location2.Y=4835.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.965mil|Location2.X=9098.722mil|Location1.Y=4807.379mil|Location2.Y=4835.137mil|Absolute=True">Short-Circuit Constraint: Between Pad U39-24(130.55mm,22.45mm) on TopLayer And Track (130.56mm,22.46mm)(131.13mm,22.46mm) on TopLayer Location : [X = 230.755mm][Y = 122.46mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9092.629mil|Location2.X=9099.518mil|Location1.Y=4817.674mil|Location2.Y=4824.562mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9092.629mil|Location2.X=9099.518mil|Location1.Y=4817.674mil|Location2.Y=4824.562mil|Absolute=True">Short-Circuit Constraint: Between Pad U39-24(130.55mm,22.45mm) on TopLayer And Track (131.13mm,22.46mm)(131.211mm,22.54mm) on TopLayer Location : [X = 231.04mm][Y = 122.456mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9054.828mil|Location2.X=9082.82mil|Location1.Y=4846.128mil|Location2.Y=4874.12mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9054.828mil|Location2.X=9082.82mil|Location1.Y=4846.128mil|Location2.Y=4874.12mil|Absolute=True">Short-Circuit Constraint: Between Pad U39-26(130.55mm,23.45mm) on TopLayer And Track (129.57mm,23.447mm)(130.547mm,23.447mm) on TopLayer Location : [X = 230.348mm][Y = 123.447mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.441mil|Location2.X=9083.975mil|Location1.Y=4852.921mil|Location2.Y=4867.455mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.441mil|Location2.X=9083.975mil|Location1.Y=4852.921mil|Location2.Y=4867.455mil|Absolute=True">Short-Circuit Constraint: Between Pad U39-26(130.55mm,23.45mm) on TopLayer And Track (130.547mm,23.447mm)(130.55mm,23.45mm) on TopLayer Location : [X = 230.548mm][Y = 123.449mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.599mil|Location2.X=9098.712mil|Location1.Y=4924.935mil|Location2.Y=4953.049mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.599mil|Location2.X=9098.712mil|Location1.Y=4924.935mil|Location2.Y=4953.049mil|Absolute=True">Short-Circuit Constraint: Between Pad U39-30(130.55mm,25.45mm) on TopLayer And Track (130.55mm,25.45mm)(131.44mm,25.45mm) on TopLayer Location : [X = 230.75mm][Y = 125.45mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8875.707mil|Location2.X=8903.821mil|Location1.Y=5080.457mil|Location2.Y=5108.57mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8875.707mil|Location2.X=8903.821mil|Location1.Y=5080.457mil|Location2.Y=5108.57mil|Absolute=True">Short-Circuit Constraint: Between Pad U39-45(125.8mm,29.2mm) on TopLayer And Track (125.8mm,29.2mm)(125.8mm,30.1mm) on TopLayer Location : [X = 225.8mm][Y = 129.401mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.515mil|Location2.X=9084.403mil|Location1.Y=6053.783mil|Location2.Y=6068.671mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.515mil|Location2.X=9084.403mil|Location1.Y=6053.783mil|Location2.Y=6068.671mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-23(130.55mm,53.95mm) on TopLayer And Track (130.55mm,53.95mm)(130.56mm,53.96mm) on TopLayer Location : [X = 230.555mm][Y = 153.955mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.515mil|Location2.X=9084.403mil|Location1.Y=6053.783mil|Location2.Y=6068.671mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.515mil|Location2.X=9084.403mil|Location1.Y=6053.783mil|Location2.Y=6068.671mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-23(130.55mm,53.95mm) on TopLayer And Track (130.55mm,53.95mm)(130.56mm,53.96mm) on TopLayer Location : [X = 230.555mm][Y = 153.955mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.965mil|Location2.X=9098.72mil|Location1.Y=6047.538mil|Location2.Y=6075.294mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.965mil|Location2.X=9098.72mil|Location1.Y=6047.538mil|Location2.Y=6075.294mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-23(130.55mm,53.95mm) on TopLayer And Track (130.56mm,53.96mm)(130.97mm,53.96mm) on TopLayer Location : [X = 230.755mm][Y = 153.96mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.965mil|Location2.X=9098.72mil|Location1.Y=6047.538mil|Location2.Y=6075.294mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.965mil|Location2.X=9098.72mil|Location1.Y=6047.538mil|Location2.Y=6075.294mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-23(130.55mm,53.95mm) on TopLayer And Track (130.56mm,53.96mm)(130.97mm,53.96mm) on TopLayer Location : [X = 230.755mm][Y = 153.96mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9086.213mil|Location2.X=9099.868mil|Location1.Y=6054.822mil|Location2.Y=6068.477mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9086.213mil|Location2.X=9099.868mil|Location1.Y=6054.822mil|Location2.Y=6068.477mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-23(130.55mm,53.95mm) on TopLayer And Track (130.976mm,53.966mm)(131.666mm,53.966mm) on TopLayer Location : [X = 230.963mm][Y = 153.966mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9085.923mil|Location2.X=9099.918mil|Location1.Y=6054.532mil|Location2.Y=6068.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9085.923mil|Location2.X=9099.918mil|Location1.Y=6054.532mil|Location2.Y=6068.527mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-23(130.55mm,53.95mm) on TopLayer And Track (130.97mm,53.96mm)(130.976mm,53.966mm) on TopLayer Location : [X = 230.96mm][Y = 153.963mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9085.89mil|Location2.X=9099.951mil|Location1.Y=6054.543mil|Location2.Y=6068.605mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9085.89mil|Location2.X=9099.951mil|Location1.Y=6054.543mil|Location2.Y=6068.605mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-23(130.55mm,53.95mm) on TopLayer And Track (130.97mm,53.96mm)(130.981mm,53.971mm) on TopLayer Location : [X = 230.96mm][Y = 153.964mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9086.428mil|Location2.X=9099.859mil|Location1.Y=6055.083mil|Location2.Y=6068.514mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9086.428mil|Location2.X=9099.859mil|Location1.Y=6055.083mil|Location2.Y=6068.514mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-23(130.55mm,53.95mm) on TopLayer And Track (130.981mm,53.971mm)(131.571mm,53.971mm) on TopLayer Location : [X = 230.966mm][Y = 153.97mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.517mil|Location2.X=9084.403mil|Location1.Y=6073.469mil|Location2.Y=6088.355mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.517mil|Location2.X=9084.403mil|Location1.Y=6073.469mil|Location2.Y=6088.355mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-24(130.55mm,54.45mm) on TopLayer And Track (130.55mm,54.45mm)(130.56mm,54.46mm) on TopLayer Location : [X = 230.555mm][Y = 154.455mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.517mil|Location2.X=9084.403mil|Location1.Y=6073.469mil|Location2.Y=6088.355mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.517mil|Location2.X=9084.403mil|Location1.Y=6073.469mil|Location2.Y=6088.355mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-24(130.55mm,54.45mm) on TopLayer And Track (130.55mm,54.45mm)(130.56mm,54.46mm) on TopLayer Location : [X = 230.555mm][Y = 154.455mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.965mil|Location2.X=9098.72mil|Location1.Y=6067.222mil|Location2.Y=6094.978mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.965mil|Location2.X=9098.72mil|Location1.Y=6067.222mil|Location2.Y=6094.978mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-24(130.55mm,54.45mm) on TopLayer And Track (130.56mm,54.46mm)(131.13mm,54.46mm) on TopLayer Location : [X = 230.755mm][Y = 154.46mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9092.631mil|Location2.X=9099.515mil|Location1.Y=6077.518mil|Location2.Y=6084.402mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9092.631mil|Location2.X=9099.515mil|Location1.Y=6077.518mil|Location2.Y=6084.402mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-24(130.55mm,54.45mm) on TopLayer And Track (131.13mm,54.46mm)(131.211mm,54.54mm) on TopLayer Location : [X = 231.04mm][Y = 154.456mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9054.826mil|Location2.X=9082.82mil|Location1.Y=6105.969mil|Location2.Y=6133.963mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9054.826mil|Location2.X=9082.82mil|Location1.Y=6105.969mil|Location2.Y=6133.963mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-26(130.55mm,55.45mm) on TopLayer And Track (129.57mm,55.447mm)(130.547mm,55.447mm) on TopLayer Location : [X = 230.348mm][Y = 155.447mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9054.826mil|Location2.X=9082.82mil|Location1.Y=6105.969mil|Location2.Y=6133.963mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9054.826mil|Location2.X=9082.82mil|Location1.Y=6105.969mil|Location2.Y=6133.963mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-26(130.55mm,55.45mm) on TopLayer And Track (129.57mm,55.447mm)(130.547mm,55.447mm) on TopLayer Location : [X = 230.348mm][Y = 155.447mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.441mil|Location2.X=9083.975mil|Location1.Y=6112.763mil|Location2.Y=6127.297mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.441mil|Location2.X=9083.975mil|Location1.Y=6112.763mil|Location2.Y=6127.297mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-26(130.55mm,55.45mm) on TopLayer And Track (130.547mm,55.447mm)(130.55mm,55.45mm) on TopLayer Location : [X = 230.548mm][Y = 155.449mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.441mil|Location2.X=9083.975mil|Location1.Y=6112.763mil|Location2.Y=6127.297mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9069.441mil|Location2.X=9083.975mil|Location1.Y=6112.763mil|Location2.Y=6127.297mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-26(130.55mm,55.45mm) on TopLayer And Track (130.547mm,55.447mm)(130.55mm,55.45mm) on TopLayer Location : [X = 230.548mm][Y = 155.449mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.599mil|Location2.X=9098.71mil|Location1.Y=6184.778mil|Location2.Y=6212.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.599mil|Location2.X=9098.71mil|Location1.Y=6184.778mil|Location2.Y=6212.89mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-30(130.55mm,57.45mm) on TopLayer And Track (130.55mm,57.45mm)(131.44mm,57.45mm) on TopLayer Location : [X = 230.75mm][Y = 157.45mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.599mil|Location2.X=9098.71mil|Location1.Y=6184.778mil|Location2.Y=6212.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9070.599mil|Location2.X=9098.71mil|Location1.Y=6184.778mil|Location2.Y=6212.89mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-30(130.55mm,57.45mm) on TopLayer And Track (130.55mm,57.45mm)(131.44mm,57.45mm) on TopLayer Location : [X = 230.75mm][Y = 157.45mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8875.707mil|Location2.X=8903.821mil|Location1.Y=6340.299mil|Location2.Y=6368.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8875.707mil|Location2.X=8903.821mil|Location1.Y=6340.299mil|Location2.Y=6368.412mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-45(125.8mm,61.2mm) on TopLayer And Track (125.8mm,61.2mm)(125.8mm,62.1mm) on TopLayer Location : [X = 225.8mm][Y = 161.401mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8875.707mil|Location2.X=8903.821mil|Location1.Y=6340.299mil|Location2.Y=6368.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8875.707mil|Location2.X=8903.821mil|Location1.Y=6340.299mil|Location2.Y=6368.412mil|Absolute=True">Short-Circuit Constraint: Between Pad U46-45(125.8mm,61.2mm) on TopLayer And Track (125.8mm,61.2mm)(125.8mm,62.1mm) on TopLayer Location : [X = 225.8mm][Y = 161.401mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDTXKAMZUE510IPHC43AN1BLLCEN4DXDAYUERF5CECT3KXFWQKQFHB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=4490.552mil|Location2.Y=4690.552mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13137.008mil|Location2.X=13337.008mil|Location1.Y=8015.354mil|Location2.Y=8215.354mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=7567.324mil|Location2.Y=7767.324mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.284mil|Location2.X=4332.284mil|Location1.Y=4205.118mil|Location2.Y=4405.118mil|Absolute=True">Un-Routed Net Constraint:  </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9979.725mil|Location2.X=10215.194mil|Location1.Y=5121.457mil|Location2.Y=5328.067mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9979.725mil|Location2.X=10215.194mil|Location1.Y=5121.457mil|Location2.Y=5328.067mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C36-2(156.025mm,32.625mm) on Bottom Layer And Track (156.926mm,32.793mm)(157.007mm,32.793mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9824.553mil|Location2.X=9859.251mil|Location1.Y=5377.953mil|Location2.Y=5411.147mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9824.553mil|Location2.X=9859.251mil|Location1.Y=5377.953mil|Location2.Y=5411.147mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (149.944mm,37.043mm) from TopLayer to Bottom Layer And Pad C38-2(150.3mm,36.725mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9826.078mil|Location2.X=10034.055mil|Location1.Y=5098.268mil|Location2.Y=5283.071mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9826.078mil|Location2.X=10034.055mil|Location1.Y=5098.268mil|Location2.Y=5283.071mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (152.065mm,32.093mm)(152.122mm,32.036mm) on Bottom Layer And Pad C39-2(152.325mm,31.65mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10019.425mil|Location2.X=10085.63mil|Location1.Y=5043.307mil|Location2.Y=5160.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10019.425mil|Location2.X=10085.63mil|Location1.Y=5043.307mil|Location2.Y=5160.598mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Via (154.893mm,30.679mm) from TopLayer to Bottom Layer And Pad C46-2(156.05mm,28.225mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9449.923mil|Location2.X=9563.717mil|Location1.Y=5226.368mil|Location2.Y=5275.471mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9449.923mil|Location2.X=9563.717mil|Location1.Y=5226.368mil|Location2.Y=5275.471mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C74-2(140.153mm,33.872mm) on Bottom Layer And Via (142.518mm,33.15mm) from TopLayer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4285.826mil|Location2.X=4490.794mil|Location1.Y=5664.567mil|Location2.Y=6057.132mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4285.826mil|Location2.X=4490.794mil|Location1.Y=5664.567mil|Location2.Y=6057.132mil|Absolute=True">Un-Routed Net Constraint: Net DDS_OUT-_4 Between Pad X4-2(11.4mm,46.42mm) on MultiLayer And Track (11.526mm,51.311mm)(11.526mm,51.312mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID1301LNB2PTV5OEHMAT2HQB2IIE2AOAVF3RNXFQHQAU5YNQYV1RCM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Length Constraint (Min=0mm) (Max=2540mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11505.084mil|Location2.X=17018.486mil|Location1.Y=6411.857mil|Location2.Y=6787.382mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11505.084mil|Location2.X=17018.486mil|Location1.Y=6411.857mil|Location2.Y=6787.382mil|Absolute=True">Length Constraint: (0mm &lt; 0mm) xSignal(NetC3_1-REFA_P_PP1) Actual xSignal Length = 0mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11485.4mil|Location2.X=17018.486mil|Location1.Y=6411.857mil|Location2.Y=6837.382mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11485.4mil|Location2.X=17018.486mil|Location1.Y=6411.857mil|Location2.Y=6837.382mil|Absolute=True">Length Constraint: (0mm &lt; 0mm) xSignal(NetC4_2-REFA_N_PP2) Actual xSignal Length = 0mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9966.133mil|Location2.X=11669.453mil|Location1.Y=5660.126mil|Location2.Y=7089.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9966.133mil|Location2.X=11669.453mil|Location1.Y=5660.126mil|Location2.Y=7089.023mil|Absolute=True">Length Constraint: (0mm &lt; 0mm) xSignal(NetC5_1-NetR17_1_PP1) Actual xSignal Length = 0mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9993.972mil|Location2.X=11594.651mil|Location1.Y=5632.287mil|Location2.Y=7089.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9993.972mil|Location2.X=11594.651mil|Location1.Y=5632.287mil|Location2.Y=7089.023mil|Absolute=True">Length Constraint: (0mm &lt; 0mm) xSignal(NetC6_2-NetR15_1_PP1) Actual xSignal Length = 0mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDEF2TEVTBPHKXPQYOCGCLQCU3BB2IHNFPCIXXT3J3VXLRVFI2MDJI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=0.5mm) (InNetClass('DDS_out_channels'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4258.267mil|Location2.X=4554.743mil|Location1.Y=4553.588mil|Location2.Y=5606.318mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4258.267mil|Location2.X=4554.743mil|Location1.Y=4553.588mil|Location2.Y=5606.318mil|Absolute=True">Matched Net Lengths: Between Net DDS_OUT+_1 And Net DDS_OUT+_2 Length:28.408mm is not within 0.5mm tolerance of Length:29.598mm (0.69mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4538.994mil|Location1.Y=0mil|Location2.Y=4989.641mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4538.994mil|Location1.Y=0mil|Location2.Y=4989.641mil|Absolute=True">Matched Net Lengths: Between Net DDS_OUT+_1 And Net DDS_OUT+_3 Length:28.042mm is not within 0.5mm tolerance of Length:29.598mm (1.056mm short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4538.994mil|Location1.Y=0mil|Location2.Y=4989.641mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4538.994mil|Location1.Y=0mil|Location2.Y=4989.641mil|Absolute=True">Matched Net Lengths: Between Net DDS_OUT+_1 And Net DDS_OUT+_4 Length:28.29mm is not within 0.5mm tolerance of Length:29.598mm (0.807mm short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDNGYGJ0EYJ3YMGVBXSBOB5Z0ULO5EGEZZZUH3XWEOYN3T2TWRZAGB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=0.5mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net CLK1_N And Net CLK1_P Actual Difference against CLK1_P is: 1.449mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net CLK3_N And Net CLK3_P Actual Difference against CLK3_P is: 0.502mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net DAC_OUT_dds_filter_22_N And Net DAC_OUT_dds_filter_22_P Actual Difference against DAC_OUT_dds_filter_22_P is: 3.722mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net DDS_CLK_IN_N And Net DDS_CLK_IN_P Actual Difference against DDS_CLK_IN_P is: 0.822mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net I_USB_N And Net I_USB_P Actual Difference against I_USB_P is: 1.39mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net RESERVE_LVDS_1_N And Net RESERVE_LVDS_1_P Actual Difference against RESERVE_LVDS_1_P is: 2.257mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net RESERVE_LVDS_2_N And Net RESERVE_LVDS_2_P Actual Difference against RESERVE_LVDS_2_P is: 1.766mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net RESERVE_LVDS_3_N And Net RESERVE_LVDS_3_P Actual Difference against RESERVE_LVDS_3_P is: 2.029mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net SYS_C\S\_N And Net SYS_C\S\_P Actual Difference against SYS_C\S\_P is: 1.244mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net SYS_MISO_0_N And Net SYS_MISO_0_P Actual Difference against SYS_MISO_0_P is: 1.817mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net SYS_MISO_1_N And Net SYS_MISO_1_P Actual Difference against SYS_MISO_1_P is: 1.529mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net SYS_MISO_2_N And Net SYS_MISO_2_P Actual Difference against SYS_MISO_2_P is: 1.894mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net SYS_MISO_3_N And Net SYS_MISO_3_P Actual Difference against SYS_MISO_3_P is: 0.576mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net SYS_MOSI_1_N And Net SYS_MOSI_1_P Actual Difference against SYS_MOSI_1_P is: 0.625mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net SYS_MOSI_2_N And Net SYS_MOSI_2_P Actual Difference against SYS_MOSI_2_P is: 1.251mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net SYS_MOSI_3_N And Net SYS_MOSI_3_P Actual Difference against SYS_MOSI_3_P is: 1.271mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Matched Net Lengths: Between Net SYS_SCLK_N And Net SYS_SCLK_P Actual Difference against SYS_SCLK_P is: 1.307mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8738.188mil|Location2.X=11878.938mil|Location1.Y=4519.691mil|Location2.Y=6283.903mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8738.188mil|Location2.X=11878.938mil|Location1.Y=4519.691mil|Location2.Y=6283.903mil|Absolute=True">Matched Net Lengths: Between xSignal(DAC_CLK_dds_channel_1_N-CLK0_N_PP1) And xSignal(DAC_CLK_dds_channel_1_P-CLK0_P_PP1) Actual Difference against DAC_CLK_dds_channel_1_P-CLK0_P_PP1 is: 2.345mm, Tolerance : 0.5mm. </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

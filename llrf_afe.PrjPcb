@@ -636,7 +636,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for llrf_afe\BGA Escape Route - llrf_afe.html
+DocumentPath=Project Outputs for llrf_afe\Design Rule Check - llrf_afe.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
@@ -720,28 +720,28 @@ DocumentPath=Project Outputs for llrf_afe\BOM\llrf_afe.xlsx
 DItemRevisionGUID=
 
 [Parameter1]
-Name=Разработал
-Value=Styuf Alexey
+Name=GlobalOrganizationName
+Value=CosyLab Siberia
 
 [Parameter2]
-Name=GlobalProjectRevision
-Value=v0.6.0
-
-[Parameter3]
-Name=GlobalProjectName3
-Value=
-
-[Parameter4]
-Name=GlobalProjectName2
-Value=Analog Front End
-
-[Parameter5]
 Name=GlobalProjectName1
 Value=LLRF-AFE
 
+[Parameter3]
+Name=GlobalProjectName2
+Value=Analog Front End
+
+[Parameter4]
+Name=GlobalProjectName3
+Value=
+
+[Parameter5]
+Name=GlobalProjectRevision
+Value=v0.6.0
+
 [Parameter6]
-Name=GlobalOrganizationName
-Value=CosyLab Siberia
+Name=Разработал
+Value=Styuf Alexey
 
 [Configuration1]
 Name=Sources
