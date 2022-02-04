@@ -31,7 +31,7 @@ ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=1
-OutputPath=
+OutputPath=Project Outputs for llrf_afe
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -719,29 +719,45 @@ DItemRevisionGUID=
 DocumentPath=Project Outputs for llrf_afe\BOM\llrf_afe.xlsx
 DItemRevisionGUID=
 
+[GeneratedDocument22]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro847A.xls
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro8243.xls
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\ProB0BA.xls
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\ProF11A.xls
+DItemRevisionGUID=
+
 [Parameter1]
-Name=GlobalOrganizationName
-Value=CosyLab Siberia
+Name=Разработал
+Value=Styuf Alexey
 
 [Parameter2]
-Name=GlobalProjectName1
-Value=LLRF-AFE
+Name=GlobalProjectRevision
+Value=v0.6.3
 
 [Parameter3]
-Name=GlobalProjectName2
-Value=Analog Front End
-
-[Parameter4]
 Name=GlobalProjectName3
 Value=
 
+[Parameter4]
+Name=GlobalProjectName2
+Value=Analog Front End
+
 [Parameter5]
-Name=GlobalProjectRevision
-Value=v0.6.0
+Name=GlobalProjectName1
+Value=LLRF-AFE
 
 [Parameter6]
-Name=Разработал
-Value=Styuf Alexey
+Name=GlobalOrganizationName
+Value=CosyLab Siberia
 
 [Configuration1]
 Name=Sources
@@ -754,7 +770,7 @@ ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
 ConfigurationType=Source
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for llrf_afe
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -1052,6 +1068,18 @@ OutputName2=Component Cross Reference Report
 OutputDocumentPath2=
 OutputVariantName2=[No Variations]
 OutputDefault2=0
+Configuration2_Name1=ColumnNameFormat
+Configuration2_Item1=CaptionAsName
+Configuration2_Name2=ForceUpdateSettings
+Configuration2_Item2=False
+Configuration2_Name3=General
+Configuration2_Item3=OpenExported=False|AddToProject=False|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=False|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=|TemplateVaultGuid=|TemplateItemGuid=|TemplateRevisionGuid=|BatchMode=5|FormWidth=1200|FormHeight=710|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=USD|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=0|UseDirectApi=False|BomSetName=
+Configuration2_Name4=GroupOrder
+Configuration2_Item4=Document=True
+Configuration2_Name5=SortOrder
+Configuration2_Item5=Document=Up|Designator=Up
+Configuration2_Name6=VisibleOrder
+Configuration2_Item6=Comment=120|Description=120|Designator=120|Footprint=120|LibRef=120|Quantity=120
 OutputType3=ReportHierarchy
 OutputName3=Report Project Hierarchy
 OutputDocumentPath3=
