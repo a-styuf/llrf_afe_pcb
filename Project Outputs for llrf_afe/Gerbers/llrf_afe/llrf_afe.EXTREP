@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: llrf_afe.GBR   07.02.2022  15:24:05
+Gerber File Extension Report For: llrf_afe.GBR   13.02.2022  20:40:59
 ------------------------------------------------------------------------------------------
 
 
@@ -11,13 +11,10 @@ Layer Extension     Layer Description
 .GTL                TopLayer                                
 .GP1                GroundPlane                             
 .G1                 MidLayer1                               
-.G2                 FlexLayer1                              
-.G3                 FlexLayer2                              
-.G4                 MidLayer2                               
-.G5                 PowerLayer                              
+.G2                 MidLayer2                               
+.G3                 PowerLayer                              
 .GBL                Bottom Layer                            
-.GBS                Bottom Solder                           
+.GBS                Flex Top Coverlay                       
 .GBO                Bottom Overlay                          
 .GM1                Mechanical 1                            
-.GM10               Mechanical10                            
 ------------------------------------------------------------------------------------------

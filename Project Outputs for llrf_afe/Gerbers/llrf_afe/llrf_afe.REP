@@ -2,60 +2,287 @@
 FileName = llrf_afe.GBR
 AutoAperture = True
 *************************************************************
-Generating : Mechanical 1
-      File : llrf_afe.GM1
+Generating : Flex Top Coverlay
+      File : llrf_afe.GBS
 
-    Adding Layer      : Mechanical 1
+    Adding Layer      : Flex Top Coverlay
 
-
-Used DCodes :
-    D10
-*************************************************************
-
-*************************************************************
-Generating : GroundPlane
-      File : llrf_afe.GP1
-
-    Adding Layer      : GroundPlane
+    Adding Layer      : Bottom Layer
 
     Adding Layer      : MultiLayer
 
 
 Used DCodes :
+    D23
+    D24
+    D27
+    D35
+    D36
+    D37
+    D44
+    D45
+    D61
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+    D104
+    D105
+    D106
+    D107
+    D108
+    D109
+    D110
+    D111
+    D112
+    D113
+    D114
+    D115
+    D116
+    D117
+    D118
+    D119
+    D120
+    D121
+    D122
+    D123
+    D124
+    D125
+    D126
+    D127
+    D263
+    D264
+    D265
+    D266
+    D269
+    D270
+    D271
+    D272
+    D275
+    D276
+    D277
+    D278
+    D279
+    D280
+*************************************************************
+
+*************************************************************
+Generating : TopSolder
+      File : llrf_afe.GTS
+
+    Adding Layer      : TopSolder
+
+    Adding Layer      : TopLayer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D78
+    D79
+    D80
+    D81
+    D82
+    D83
+    D84
+    D85
+    D86
+    D87
+    D88
+    D89
+    D90
+    D91
+    D92
+    D93
+    D94
+    D95
+    D96
+    D97
+    D98
+    D99
+    D100
+    D101
+    D102
+    D103
+    D104
+    D105
+    D106
+    D107
+    D108
+    D109
+    D110
+    D111
+    D112
+    D113
+    D114
+    D115
+    D116
+    D117
+    D118
+    D119
+    D120
+    D121
+    D122
+    D123
+    D124
+    D125
+    D126
+    D127
+*************************************************************
+
+*************************************************************
+Generating : TopOverlay
+      File : llrf_afe.GTO
+
+    Adding Layer      : TopOverlay
+
+
+Used DCodes :
+    D10
+    D11
     D12
     D13
+    D14
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : llrf_afe.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D14
+    D16
+    D17
+    D21
     D99
     D106
-    D115
-    D123
+    D108
+    D109
+    D118
+    D124
+    D129
+    D130
+    D133
+    D141
+    D142
+    D143
+    D150
+    D151
+    D167
+    D202
+    D205
+    D207
+    D208
+    D209
+    D210
+    D211
+    D212
+    D213
+    D214
+    D215
+    D216
+    D217
+    D218
+    D219
+    D220
+    D221
+    D222
+    D223
+    D224
+    D225
+    D226
     D227
-    D231
-    D232
-    D233
-    D234
-    D235
-    D236
-    D237
-    D238
-    D239
-    D240
-    D241
-    D242
-    D243
-    D244
-    D245
-    D246
-    D247
-    D248
-    D249
-    D250
-    D251
-    D252
-    D253
-    D254
-    D255
-    D256
-    D257
+    D228
+    D229
+    D230
+    D260
+    D261
+    D262
+    D263
+    D264
+    D265
+    D266
+    D267
+    D268
+    D269
+    D270
+    D271
+    D272
+    D273
+    D274
 *************************************************************
 
 *************************************************************
@@ -187,101 +414,8 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : MidLayer1
-      File : llrf_afe.G1
-
-    Adding Layer      : MidLayer1
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D10
-    D11
-    D14
-    D17
-    D99
-    D106
-    D108
-    D109
-    D124
-    D202
-    D211
-    D214
-    D221
-    D224
-    D228
-    D229
-    D230
-*************************************************************
-
-*************************************************************
-Generating : FlexLayer1
-      File : llrf_afe.G2
-
-    Adding Layer      : FlexLayer1
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D10
-    D11
-    D14
-    D16
-    D99
-    D106
-    D108
-    D124
-    D211
-    D214
-    D221
-    D224
-    D228
-    D229
-    D230
-*************************************************************
-
-*************************************************************
-Generating : Mechanical10
-      File : llrf_afe.GM10
-
-    Adding Layer      : Mechanical10
-
-
-Used DCodes :
-    D10
-*************************************************************
-
-*************************************************************
-Generating : FlexLayer2
-      File : llrf_afe.G3
-
-    Adding Layer      : FlexLayer2
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D11
-    D14
-    D16
-    D99
-    D106
-    D108
-    D124
-    D211
-    D214
-    D221
-    D224
-    D228
-    D229
-    D230
-*************************************************************
-
-*************************************************************
 Generating : PowerLayer
-      File : llrf_afe.G5
+      File : llrf_afe.G3
 
     Adding Layer      : PowerLayer
 
@@ -292,121 +426,31 @@ Used DCodes :
     D14
     D16
     D17
-    D108
-    D124
-    D143
-    D202
-    D205
-    D207
-    D210
-    D213
-    D214
-    D215
-    D219
-    D224
-    D225
-    D228
-*************************************************************
-
-*************************************************************
-Generating : TopOverlay
-      File : llrf_afe.GTO
-
-    Adding Layer      : TopOverlay
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-    D13
-    D14
-    D15
-    D16
-    D17
-    D18
-    D19
-    D20
-    D21
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : llrf_afe.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D10
-    D11
-    D14
-    D16
-    D17
-    D21
     D99
     D106
     D108
-    D109
-    D118
     D124
-    D129
-    D130
-    D133
-    D141
-    D142
     D143
-    D150
-    D151
-    D167
     D202
     D205
     D207
-    D208
-    D209
     D210
     D211
-    D212
     D213
     D214
     D215
-    D216
-    D217
-    D218
     D219
-    D220
     D221
-    D222
-    D223
     D224
     D225
-    D226
     D227
-    D228
     D229
     D230
-    D260
-    D261
-    D262
-    D263
-    D264
-    D265
-    D266
-    D267
-    D268
-    D269
-    D270
-    D271
-    D272
-    D273
-    D274
 *************************************************************
 
 *************************************************************
 Generating : MidLayer2
-      File : llrf_afe.G4
+      File : llrf_afe.G2
 
     Adding Layer      : MidLayer2
 
@@ -431,7 +475,7 @@ Used DCodes :
     D217
     D221
     D224
-    D228
+    D227
     D229
     D230
     D258
@@ -439,191 +483,14 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : TopSolder
-      File : llrf_afe.GTS
+Generating : Mechanical 1
+      File : llrf_afe.GM1
 
-    Adding Layer      : TopSolder
-
-    Adding Layer      : TopLayer
-
-    Adding Layer      : MultiLayer
+    Adding Layer      : Mechanical 1
 
 
 Used DCodes :
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-    D68
-    D69
-    D70
-    D71
-    D72
-    D73
-    D74
-    D75
-    D76
-    D77
-    D78
-    D79
-    D80
-    D81
-    D82
-    D83
-    D84
-    D85
-    D86
-    D87
-    D88
-    D89
-    D90
-    D91
-    D92
-    D93
-    D94
-    D95
-    D96
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
-    D103
-    D104
-    D105
-    D106
-    D107
-    D108
-    D109
-    D110
-    D111
-    D112
-    D113
-    D114
-    D115
-    D116
-    D117
-    D118
-    D119
-    D120
-    D121
-    D122
-    D123
-    D124
-    D125
-    D126
-    D127
-*************************************************************
-
-*************************************************************
-Generating : Bottom Solder
-      File : llrf_afe.GBS
-
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D23
-    D24
-    D27
-    D35
-    D36
-    D37
-    D44
-    D45
-    D61
-    D97
-    D98
-    D99
-    D100
-    D101
-    D102
-    D103
-    D104
-    D105
-    D106
-    D107
-    D108
-    D109
-    D110
-    D111
-    D112
-    D113
-    D114
-    D115
-    D116
-    D117
-    D118
-    D119
-    D120
-    D121
-    D122
-    D123
-    D124
-    D125
-    D126
-    D127
-    D263
-    D264
-    D265
-    D266
-    D269
-    D270
-    D271
-    D272
-    D275
-    D276
-    D277
-    D278
-    D279
-    D280
+    D10
 *************************************************************
 
 *************************************************************
@@ -639,5 +506,80 @@ Used DCodes :
     D12
     D13
     D14
+*************************************************************
+
+*************************************************************
+Generating : MidLayer1
+      File : llrf_afe.G1
+
+    Adding Layer      : MidLayer1
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D14
+    D17
+    D99
+    D106
+    D108
+    D109
+    D124
+    D202
+    D211
+    D214
+    D221
+    D224
+    D227
+    D229
+    D230
+*************************************************************
+
+*************************************************************
+Generating : GroundPlane
+      File : llrf_afe.GP1
+
+    Adding Layer      : GroundPlane
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D12
+    D13
+    D99
+    D106
+    D115
+    D123
+    D228
+    D231
+    D232
+    D233
+    D234
+    D235
+    D236
+    D237
+    D238
+    D239
+    D240
+    D241
+    D242
+    D243
+    D244
+    D245
+    D246
+    D247
+    D248
+    D249
+    D250
+    D251
+    D252
+    D253
+    D254
+    D255
+    D256
+    D257
 *************************************************************
 

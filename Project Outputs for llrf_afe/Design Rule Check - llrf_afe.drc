@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : D:\YandexDisk\Work\Altium\COSY\llrf_afe\llrf_afe.PcbDoc
-Date     : 03.02.2022
-Time     : 18:17:43
+Date     : 13.02.2022
+Time     : 20:21:05
 
 WARNING: Unplated multi-layer pad(s) detected
    Pad Free-CASE(7.5mm,9.35mm) on MultiLayer on Net CASE
@@ -9,13 +9,13 @@ WARNING: Unplated multi-layer pad(s) detected
    Pad Free-CASE(236.22mm,16.6mm) on MultiLayer on Net CASE
    Pad Free-CASE(236.22mm,106.13mm) on MultiLayer on Net CASE
 
-Processing Rule : Clearance Constraint (Gap=0.1mm) (WithinRoom('FPGA room')),(All)
+Processing Rule : Clearance Constraint (Gap=0.15mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=0.15mm) (IsCopperRegion),(All)
 Rule Violations :0
 
-Processing Rule : Clearance Constraint (Gap=0.15mm) (All),(All)
+Processing Rule : Clearance Constraint (Gap=0.1mm) (WithinRoom('FPGA room')),(All)
 Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=0.25mm) (OnLayer('GroundPlane')),(All)
@@ -87,21 +87,8 @@ Processing Rule : Un-Routed Net Constraint ( (All) )
    Violation between Un-Routed Net Constraint:  
    Violation between Un-Routed Net Constraint:  
    Violation between Un-Routed Net Constraint:  
-   Violation between Un-Routed Net Constraint:  
-   Violation between Un-Routed Net Constraint:  
-   Violation between Un-Routed Net Constraint:  
-   Violation between Un-Routed Net Constraint:  
-   Violation between Un-Routed Net Constraint:  
-   Violation between Un-Routed Net Constraint:  
-   Violation between Un-Routed Net Constraint:  
-   Violation between Un-Routed Net Constraint:  
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C36-2(156.025mm,32.625mm) on Bottom Layer And Track (156.926mm,32.793mm)(157.007mm,32.793mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (149.944mm,37.043mm) from TopLayer to Bottom Layer And Pad C38-2(150.3mm,36.725mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Track (152.065mm,32.093mm)(152.122mm,32.036mm) on Bottom Layer And Pad C39-2(152.325mm,31.65mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Via (154.893mm,30.679mm) from TopLayer to Bottom Layer And Pad C46-2(156.05mm,28.225mm) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C74-2(140.153mm,33.872mm) on Bottom Layer And Via (142.518mm,33.15mm) from TopLayer to Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net DDS_OUT-_4 Between Pad X4-2(11.4mm,46.42mm) on MultiLayer And Track (11.526mm,51.311mm)(11.526mm,51.312mm) on Bottom Layer 
-Rule Violations :28
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C46-2(156.05mm,28.225mm) on Bottom Layer And Pad U2-P19(157.015mm,27.843mm) on TopLayer 
+Rule Violations :15
 
 Processing Rule : Width Constraint (Min=0.1mm) (Max=1mm) (Preferred=0.1mm) (WithinRoom('FPGA room'))
 Rule Violations :0
@@ -109,16 +96,16 @@ Rule Violations :0
 Processing Rule : Width Constraint (Min=0.1mm) (Max=2mm) (Preferred=0.2mm) (All)
 Rule Violations :0
 
-Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.15mm) (Conductor Width=0.15mm) (Air Gap=0.15mm) (Entries=4) (WithinRoom('FPGA room'))
-Rule Violations :0
-
 Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.2mm) (Conductor Width=0.15mm) (Air Gap=0.15mm) (Entries=4) (All)
 Rule Violations :0
 
-Processing Rule : Minimum Annular Ring (Minimum=0.1mm) (All)
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.15mm) (Conductor Width=0.15mm) (Air Gap=0.15mm) (Entries=4) (WithinRoom('FPGA room'))
 Rule Violations :0
 
 Processing Rule : Minimum Annular Ring (Minimum=0.15mm) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.1mm) (All)
 Rule Violations :0
 
 Processing Rule : Length Constraint (Min=0mm) (Max=2540mm) (All)
@@ -149,23 +136,25 @@ Rule Violations :3
 Processing Rule : Matched Lengths(Tolerance=0.5mm) (All)
    Violation between Matched Net Lengths: Between Net CLK1_N And Net CLK1_P Actual Difference against CLK1_P is: 1.449mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net CLK3_N And Net CLK3_P Actual Difference against CLK3_P is: 0.502mm, Tolerance : 0.5mm. 
-   Violation between Matched Net Lengths: Between Net DAC_OUT_dds_filter_22_N And Net DAC_OUT_dds_filter_22_P Actual Difference against DAC_OUT_dds_filter_22_P is: 3.722mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net DAC_OUT_dds_filter_22_N And Net DAC_OUT_dds_filter_22_P Actual Difference against DAC_OUT_dds_filter_22_P is: 2.65mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net DDS_CLK_IN_N And Net DDS_CLK_IN_P Actual Difference against DDS_CLK_IN_P is: 0.822mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net I_USB_N And Net I_USB_P Actual Difference against I_USB_P is: 1.39mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net RESERVE_LVDS_1_N And Net RESERVE_LVDS_1_P Actual Difference against RESERVE_LVDS_1_P is: 2.257mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net RESERVE_LVDS_2_N And Net RESERVE_LVDS_2_P Actual Difference against RESERVE_LVDS_2_P is: 1.766mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net RESERVE_LVDS_3_N And Net RESERVE_LVDS_3_P Actual Difference against RESERVE_LVDS_3_P is: 2.029mm, Tolerance : 0.5mm. 
-   Violation between Matched Net Lengths: Between Net SYS_C\S\_N And Net SYS_C\S\_P Actual Difference against SYS_C\S\_P is: 1.244mm, Tolerance : 0.5mm. 
-   Violation between Matched Net Lengths: Between Net SYS_MISO_0_N And Net SYS_MISO_0_P Actual Difference against SYS_MISO_0_P is: 1.817mm, Tolerance : 0.5mm. 
-   Violation between Matched Net Lengths: Between Net SYS_MISO_1_N And Net SYS_MISO_1_P Actual Difference against SYS_MISO_1_P is: 1.529mm, Tolerance : 0.5mm. 
-   Violation between Matched Net Lengths: Between Net SYS_MISO_2_N And Net SYS_MISO_2_P Actual Difference against SYS_MISO_2_P is: 1.894mm, Tolerance : 0.5mm. 
-   Violation between Matched Net Lengths: Between Net SYS_MISO_3_N And Net SYS_MISO_3_P Actual Difference against SYS_MISO_3_P is: 0.576mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_C\S\_N And Net SYS_C\S\_P Actual Difference against SYS_C\S\_P is: 1.252mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_DDS_SYNC_N And Net SYS_DDS_SYNC_P Actual Difference against SYS_DDS_SYNC_P is: 1.265mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MISO_0_N And Net SYS_MISO_0_P Actual Difference against SYS_MISO_0_P is: 1.819mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MISO_1_N And Net SYS_MISO_1_P Actual Difference against SYS_MISO_1_P is: 1.524mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MISO_2_N And Net SYS_MISO_2_P Actual Difference against SYS_MISO_2_P is: 0.637mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MISO_3_N And Net SYS_MISO_3_P Actual Difference against SYS_MISO_3_P is: 0.574mm, Tolerance : 0.5mm. 
+   Violation between Matched Net Lengths: Between Net SYS_MOSI_0_N And Net SYS_MOSI_0_P Actual Difference against SYS_MOSI_0_P is: 1.02mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net SYS_MOSI_1_N And Net SYS_MOSI_1_P Actual Difference against SYS_MOSI_1_P is: 0.625mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net SYS_MOSI_2_N And Net SYS_MOSI_2_P Actual Difference against SYS_MOSI_2_P is: 1.251mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net SYS_MOSI_3_N And Net SYS_MOSI_3_P Actual Difference against SYS_MOSI_3_P is: 1.271mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between Net SYS_SCLK_N And Net SYS_SCLK_P Actual Difference against SYS_SCLK_P is: 1.307mm, Tolerance : 0.5mm. 
    Violation between Matched Net Lengths: Between xSignal(DAC_CLK_dds_channel_1_N-CLK0_N_PP1) And xSignal(DAC_CLK_dds_channel_1_P-CLK0_P_PP1) Actual Difference against DAC_CLK_dds_channel_1_P-CLK0_P_PP1 is: 2.345mm, Tolerance : 0.5mm. 
-Rule Violations :18
+Rule Violations :20
 
 Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1_Passives_C5,C6_MatchLengthsClass_1'))
 Rule Violations :0
@@ -189,6 +178,6 @@ Processing Rule : Matched Lengths(Tolerance=2.54mm) (InxSignalClass('xSignals_U1
 Rule Violations :0
 
 
-Violations Detected : 101
+Violations Detected : 90
 Waived Violations : 0
 Time Elapsed        : 00:00:04
