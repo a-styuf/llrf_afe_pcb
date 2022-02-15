@@ -660,71 +660,59 @@ DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.G3
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.G4
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.G5
-DItemRevisionGUID=
-
-[GeneratedDocument9]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GBL
 DItemRevisionGUID=
 
-[GeneratedDocument10]
+[GeneratedDocument8]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GBO
 DItemRevisionGUID=
 
-[GeneratedDocument11]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GBS
 DItemRevisionGUID=
 
-[GeneratedDocument12]
+[GeneratedDocument10]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GM1
 DItemRevisionGUID=
 
-[GeneratedDocument13]
-DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GM10
-DItemRevisionGUID=
-
-[GeneratedDocument14]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GP1
 DItemRevisionGUID=
 
-[GeneratedDocument15]
+[GeneratedDocument12]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTL
 DItemRevisionGUID=
 
-[GeneratedDocument16]
+[GeneratedDocument13]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTO
 DItemRevisionGUID=
 
-[GeneratedDocument17]
+[GeneratedDocument14]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.GTS
 DItemRevisionGUID=
 
-[GeneratedDocument18]
+[GeneratedDocument15]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument19]
+[GeneratedDocument16]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.REP
 DItemRevisionGUID=
 
-[GeneratedDocument20]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for llrf_afe\Gerbers\llrf_afe\llrf_afe.TXT
 DItemRevisionGUID=
 
-[GeneratedDocument21]
+[GeneratedDocument18]
 DocumentPath=Project Outputs for llrf_afe\BOM\llrf_afe.xlsx
 DItemRevisionGUID=
 
-[GeneratedDocument22]
-DocumentPath=C:\Users\a-sty\AppData\Local\Temp\Pro89F1.xls
+[GeneratedDocument19]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\Pro8C97.xls
 DItemRevisionGUID=
 
-[GeneratedDocument23]
-DocumentPath=C:\Users\a-sty\AppData\Local\Temp\ProEBE1.xls
+[GeneratedDocument20]
+DocumentPath=C:\Users\2C83~1\AppData\Local\Temp\ProD265.xls
 DItemRevisionGUID=
 
 [Parameter1]
@@ -733,7 +721,7 @@ Value=Styuf Alexey
 
 [Parameter2]
 Name=GlobalProjectRevision
-Value=v0.7
+Value=v0.8
 
 [Parameter3]
 Name=GlobalProjectName3
@@ -873,7 +861,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Adobe PDF
+TargetPrinter=HP LaserJet Pro MFP M521 PCL 6
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
@@ -1098,12 +1086,6 @@ OutputDocumentPath7=
 OutputVariantName7=[No Variations]
 OutputDefault7=0
 PageOptions7=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType8=BOM_ReportCompare
-OutputName8=BOM Compare
-OutputDocumentPath8=
-OutputVariantName8=[No Variations]
-OutputDefault8=0
-PageOptions8=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 
 [OutputGroup7]
 Name=Other Outputs
